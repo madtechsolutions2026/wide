@@ -1,0 +1,3404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WIDE FILM — Wedding & Pre-Wedding Films · Hyderabad</title>
+  <meta name="description" content="WIDE FILM — Hyderabad's most celebrated wedding photography & cinematic filmmaking studio. Candid, cinematic & traditional. Book +91 96653 51481." />
+  <link rel="icon" href="assets/images/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    /* ──────────────────────────────────────────────
+       DESIGN TOKENS
+    ────────────────────────────────────────────── */
+    :root {
+      --cream:   #FAF7F2;
+      --warm:    #F3EDE3;
+      --paper:   #EDE6D9;
+      --border:  #D9CEC0;
+      --muted:   #9E8F7F;
+      --text:    #2E2619;
+      --text2:   #5A4E3C;
+      --gold:    #B8922A;
+      --gold2:   #D4A843;
+      --red:     #8B2635;
+      --accent:  #6B4C2A;
+      --white:   #FFFFFF;
+      --r: 16px;
+      --rL: 24px;
+
+      /* ── WIDE FILM Logo Aperture Colors ── */
+      --logo-gold:  #C8960C;   /* golden-yellow blade  */
+      --logo-green: #2A7C34;   /* forest green blade   */
+      --logo-red:   #B3231F;   /* crimson red blade    */
+      --logo-blue:  #1558A8;   /* cobalt blue blade    */
+
+      --logo-gold-t:  rgba(200,150,12,.12);
+      --logo-green-t: rgba(42,124,52,.12);
+      --logo-red-t:   rgba(179,35,31,.12);
+      --logo-blue-t:  rgba(21,88,168,.12);
+    }
+
+
+    /* ──────────────────────────────────────────────
+       BASE
+    ────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ──────────────────────────────────────────────
+       TYPOGRAPHY HELPERS
+    ────────────────────────────────────────────── */
+    .f-serif { font-family: 'Cormorant Garamond', serif; }
+    .f-italic { font-family: 'Playfair Display', serif; font-style: italic; }
+
+    .label {
+      font-size: 10px;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.2rem, 9vw, 7.5rem);
+      font-weight: 300;
+      line-height: 1.0;
+      color: var(--text);
+    }
+    .h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text);
+    }
+    .h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .body-sm { font-size: .875rem; line-height: 1.7; color: var(--text2); }
+    .body-xs { font-size: .78rem; line-height: 1.6; color: var(--muted); }
+
+    /* ──────────────────────────────────────────────
+       UTILS
+    ────────────────────────────────────────────── */
+    .container { max-width: 1340px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 60px); }
+    .divider {
+      display: block;
+      width: 48px; height: 1px;
+      background: var(--gold);
+      margin: 1.25rem 0;
+    }
+    .divider-center { margin: 1.25rem auto; }
+    .text-center { text-align: center; }
+    .flex { display: flex; }
+    .gap-s { gap: .75rem; }
+    .gap-m { gap: 1.5rem; }
+    .gap-l { gap: 2.5rem; }
+    .items-center { align-items: center; }
+    .wrap { flex-wrap: wrap; }
+    .col { flex-direction: column; }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex; align-items: center; gap: .55rem;
+      padding: .85rem 2rem;
+      border-radius: 2px;
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .3s ease;
+      border: none;
+    }
+    .btn-dark {
+      background: var(--text);
+      color: var(--cream);
+    }
+    .btn-dark:hover {
+      background: var(--accent);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--text);
+    }
+    .btn-outline:hover {
+      background: var(--text);
+      color: var(--cream);
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--white);
+    }
+    .btn-gold:hover { background: var(--accent); }
+    .btn-wa {
+      background: #25D366;
+      color: #fff;
+    }
+    .btn-wa:hover { background: #1DAD55; }
+
+    /* ──────────────────────────────────────────────
+       TOP BAR
+    ────────────────────────────────────────────── */
+    .topbar {
+      background: var(--text);
+      color: var(--cream);
+      text-align: center;
+      padding: .6rem 1rem;
+      font-size: .72rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    .topbar span { color: var(--gold2); margin: 0 .75rem; }
+
+    /* ──────────────────────────────────────────────
+       NAV
+    ────────────────────────────────────────────── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,247,242,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      padding: 0 clamp(16px, 4vw, 56px);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: .75rem;
+    }
+    .nav-logo img {
+      width: 42px; height: 42px; border-radius: 50%; object-fit: contain;
+    }
+    .nav-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; letter-spacing: .18em; color: var(--text); line-height: 1; }
+    .nav-logo-sub { font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+
+    .nav-links { display: flex; align-items: center; gap: 2.2rem; }
+    .nav-links a { font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--text2); transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta { display: flex; gap: .75rem; }
+
+    .hamburger { display: none; background: none; border: none; cursor: pointer; }
+    .hamburger span {
+      display: block; width: 24px; height: 1.5px;
+      background: var(--text); margin: 5px 0;
+      transition: all .3s;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed; inset: 0; top: 73px;
+      background: var(--cream);
+      z-index: 99;
+      padding: 2.5rem 2rem;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color: var(--text); border-bottom: 1px solid var(--border); padding-bottom: 1rem; }
+
+    @media (max-width: 900px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: block; }
+    }
+
+    /* ──────────────────────────────────────────────
+       HERO SLIDESHOW & BANNER ANIMATIONS
+    ────────────────────────────────────────────── */
+    .slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transform: scale(1.08);
+      transition: opacity 1.6s ease-in-out, transform 7s ease-out;
+      z-index: 0;
+    }
+    .slide.active {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 1;
+    }
+    .slide.prev {
+      opacity: 0;
+      transform: scale(1.04);
+      z-index: 0;
+    }
+
+    .sdot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.35);
+      border: 1px solid rgba(255,255,255,.6);
+      cursor: pointer;
+      transition: all .35s ease;
+      padding: 0;
+    }
+    .sdot.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      width: 28px;
+      border-radius: 10px;
+    }
+    .sdot:hover:not(.active) {
+      background: rgba(255,255,255,.7);
+    }
+
+    .banner-anim {
+      transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1);
+    }
+    .banner-anim-done {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    @keyframes apertureSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes scrollBounce {
+      0%, 100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, 8px); }
+    }
+
+    /* ──────────────────────────────────────────────
+       SECTION WRAPPER
+    ────────────────────────────────────────────── */
+    section { padding: clamp(4rem, 9vw, 8rem) 0; }
+    section.alt { background: var(--warm); }
+    section.paper { background: var(--paper); }
+
+    .section-header { margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
+
+    /* ──────────────────────────────────────────────
+       MARQUEE STRIP
+    ────────────────────────────────────────────── */
+    .marquee-strip {
+      background: var(--text);
+      color: var(--cream);
+      padding: 1rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee-track {
+      display: inline-flex; gap: 3rem;
+      animation: marquee 22s linear infinite;
+    }
+    .marquee-track span {
+      font-size: .72rem; letter-spacing: .25em; text-transform: uppercase;
+    }
+    .marquee-track .dot { color: var(--gold2); }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ──────────────────────────────────────────────
+       PORTFOLIO / GALLERY GRID
+    ────────────────────────────────────────────── */
+    .gallery-filters {
+      display: flex; flex-wrap: wrap; gap: .5rem;
+      margin-bottom: 2.5rem;
+    }
+    .flt {
+      padding: .55rem 1.25rem; border-radius: 2px;
+      font-size: .72rem; letter-spacing: .15em; text-transform: uppercase;
+      background: transparent; border: 1px solid var(--border);
+      color: var(--text2); cursor: pointer;
+      transition: all .25s;
+    }
+    .flt:hover, .flt.active {
+      background: var(--text); color: var(--cream); border-color: var(--text);
+    }
+
+    .gallery-masonry {
+      columns: 3;
+      column-gap: 1.25rem;
+    }
+    .gallery-masonry .g-item {
+      break-inside: avoid;
+      margin-bottom: 1.25rem;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .gallery-masonry .g-item img {
+      width: 100%; height: auto; display: block;
+      transition: transform .6s cubic-bezier(.16,1,.3,1);
+    }
+    .gallery-masonry .g-item:hover img { transform: scale(1.04); }
+    .g-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(46,38,25,.75) 0%, transparent 55%);
+      opacity: 0; transition: opacity .3s;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 1.25rem;
+    }
+    .g-item:hover .g-overlay { opacity: 1; }
+    .g-overlay h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #fff; }
+    .g-overlay p { font-size: .7rem; color: rgba(255,255,255,.7); letter-spacing: .1em; margin-top: .25rem; }
+
+    @media (max-width: 900px) { .gallery-masonry { columns: 2; } }
+    @media (max-width: 540px) { .gallery-masonry { columns: 1; } }
+
+    /* ──────────────────────────────────────────────
+       VIDEO REELS — FILM STRIP STYLE
+    ────────────────────────────────────────────── */
+    .reels-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .reel-card {
+      position: relative;
+      border-radius: var(--r);
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      background: #1a1410;
+      cursor: pointer;
+    }
+    .reel-card video {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: opacity .3s;
+    }
+    .reel-info {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.82) 0%, transparent 55%);
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 1.5rem;
+    }
+    .reel-tag {
+      display: inline-block;
+      background: var(--gold);
+      color: #fff;
+      font-size: .65rem; letter-spacing: .18em; text-transform: uppercase;
+      padding: .3rem .7rem; border-radius: 2px;
+      margin-bottom: .75rem;
+      width: fit-content;
+    }
+    .reel-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: #fff; font-weight: 400; }
+    .reel-sub { font-size: .72rem; color: rgba(255,255,255,.65); margin-top: .25rem; }
+    .reel-controls { display: flex; gap: .6rem; margin-top: 1rem; }
+    .reel-btn {
+      display: inline-flex; align-items: center; gap: .4rem;
+      padding: .55rem 1rem; border-radius: 2px;
+      font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+      cursor: pointer; border: none; transition: all .25s;
+    }
+    .reel-play { background: #fff; color: #1a1410; }
+    .reel-play:hover { background: var(--gold); color: #fff; }
+    .reel-expand { background: rgba(255,255,255,.15); color: #fff; border: 1px solid rgba(255,255,255,.3); }
+    .reel-expand:hover { background: rgba(255,255,255,.3); }
+    .reel-mute {
+      position: absolute; top: 1rem; right: 1rem;
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3);
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: .8rem; transition: all .25s;
+    }
+    .reel-mute:hover { background: rgba(255,255,255,.35); }
+
+    @media (max-width: 640px) {
+      .reels-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ──────────────────────────────────────────────
+       SERVICES — MAGAZINE STYLE
+    ────────────────────────────────────────────── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .svc {
+      background: var(--cream);
+      padding: 2.5rem 2rem;
+      transition: background .25s;
+    }
+    .svc:hover { background: var(--warm); }
+    .svc-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem; font-weight: 300;
+      color: var(--border); line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    .svc h3 { margin-bottom: .75rem; font-size: 1.25rem; }
+    .svc p { font-size: .82rem; line-height: 1.8; color: var(--text2); }
+
+    @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 540px) { .services-grid { grid-template-columns: 1fr; } }
+
+    /* ──────────────────────────────────────────────
+       PACKAGES — EDITORIAL PRICING
+    ────────────────────────────────────────────── */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .pkg {
+      border: 1px solid var(--border);
+      background: var(--white);
+      padding: 2.5rem 2rem;
+      border-radius: var(--r);
+      display: flex; flex-direction: column;
+      transition: box-shadow .3s;
+    }
+    .pkg:hover { box-shadow: 0 16px 48px rgba(46,38,25,.1); }
+    .pkg.featured {
+      background: var(--text);
+      color: var(--cream);
+      border-color: var(--text);
+    }
+    .pkg.featured .pkg-name { color: var(--cream); }
+    .pkg.featured .pkg-line { color: rgba(255,255,255,.5); }
+    .pkg.featured .pkg-feature { color: rgba(255,255,255,.75); }
+    .pkg.featured .pkg-feature i { color: var(--gold2); }
+    .pkg-badge {
+      font-size: .65rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: .75rem;
+    }
+    .pkg.featured .pkg-badge { color: var(--gold2); }
+    .pkg-name { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 500; margin-bottom: .5rem; }
+    .pkg-sub { font-size: .78rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .pkg.featured .pkg-sub { color: rgba(255,255,255,.5); }
+    .pkg-line { width: 32px; height: 1px; background: var(--border); margin: 0 0 1.5rem; }
+    .pkg.featured .pkg-line { background: rgba(255,255,255,.2); }
+    .pkg-features { list-style: none; flex: 1; margin-bottom: 2rem; }
+    .pkg-feature {
+      display: flex; gap: .65rem; align-items: flex-start;
+      font-size: .8rem; color: var(--text2); padding: .6rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .pkg.featured .pkg-feature { border-color: rgba(255,255,255,.1); }
+    .pkg-feature:last-child { border-bottom: none; }
+    .pkg-feature i { color: var(--gold); margin-top: .15rem; font-size: .65rem; flex-shrink: 0; }
+
+    @media (max-width: 900px) { .packages-grid { grid-template-columns: 1fr; max-width: 480px; } }
+
+    /* ──────────────────────────────────────────────
+       ESTIMATOR
+    ────────────────────────────────────────────── */
+    .estimator-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .estimator-options { display: flex; flex-direction: column; gap: 1.5rem; }
+    .est-group label.heading {
+      font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); font-weight: 500;
+      display: block; margin-bottom: .75rem;
+    }
+    .radio-group, .check-group { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .radio-card input, .check-card input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .radio-card, .check-card {
+      position: relative;
+      padding: .65rem 1.1rem; border: 1px solid var(--border); border-radius: 2px;
+      font-size: .75rem; color: var(--text2); cursor: pointer;
+      transition: all .2s;
+    }
+    .radio-card:has(input:checked), .check-card:has(input:checked) {
+      background: var(--text); color: var(--cream); border-color: var(--text);
+    }
+    .est-result {
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 2.5rem;
+      background: var(--white);
+    }
+    .est-result-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem; margin-bottom: .5rem;
+    }
+    #estSummary { font-size: .82rem; color: var(--text2); margin-bottom: 2rem; line-height: 1.7; }
+
+    @media (max-width: 768px) { .estimator-wrap { grid-template-columns: 1fr; gap: 2rem; } }
+
+    /* ──────────────────────────────────────────────
+       ABOUT SPLIT
+    ────────────────────────────────────────────── */
+    .about-grid {
+      display: grid; grid-template-columns: 5fr 7fr; gap: 5rem; align-items: center;
+    }
+    .about-img-stack { position: relative; }
+    .about-img-main {
+      border-radius: var(--rL);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .about-img-float {
+      position: absolute;
+      bottom: -2rem; right: -2.5rem;
+      width: 55%;
+      aspect-ratio: 4/3;
+      border-radius: var(--r);
+      overflow: hidden;
+      border: 4px solid var(--cream);
+      box-shadow: 0 16px 48px rgba(0,0,0,.12);
+    }
+    .about-logo-badge {
+      position: absolute; top: 1.5rem; left: -1.5rem;
+      width: 72px; height: 72px; border-radius: 50%;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,.1);
+    }
+    .about-logo-badge img { object-fit: contain; padding: 8px; }
+
+    .info-card {
+      display: flex; gap: 1rem;
+      padding: 1.25rem; border: 1px solid var(--border); border-radius: var(--r);
+      background: var(--white); margin-top: 1.25rem;
+      transition: box-shadow .25s;
+    }
+    .info-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.07); }
+    .info-card-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: var(--warm); color: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+    .info-card-text .small { font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+    .info-card-text .val { font-size: .9rem; font-weight: 500; color: var(--text); margin-top: .2rem; }
+
+    .testimonial {
+      background: var(--warm); border-radius: var(--rL);
+      padding: 2rem; margin-top: 2rem;
+      position: relative;
+    }
+    .testimonial::before {
+      content: '\201C';
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem; line-height: 1;
+      color: var(--gold);
+      position: absolute; top: -.5rem; left: 1.5rem;
+    }
+    .testimonial-text { font-size: .88rem; line-height: 1.8; color: var(--text2); font-style: italic; padding-top: 2rem; }
+    .testimonial-author { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-top: 1rem; font-weight: 500; }
+
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-img-float { bottom: -1.5rem; right: -1rem; }
+    }
+
+    /* ──────────────────────────────────────────────
+       CONTACT
+    ────────────────────────────────────────────── */
+    .contact-grid {
+      display: grid; grid-template-columns: 4fr 6fr; gap: 5rem;
+    }
+    .form-field { margin-bottom: 1.25rem; }
+    .form-field label {
+      display: block; font-size: .72rem; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--text2); font-weight: 500; margin-bottom: .5rem;
+    }
+    .form-field input, .form-field select, .form-field textarea {
+      width: 100%;
+      padding: .85rem 1rem;
+      border: 1px solid var(--border); border-radius: 2px;
+      background: var(--white);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .875rem;
+      transition: border-color .2s;
+      outline: none;
+    }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+      border-color: var(--gold);
+    }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 540px) { .form-grid { grid-template-columns: 1fr; } }
+
+    .map-frame {
+      border-radius: var(--r); overflow: hidden;
+      height: 200px; margin-top: 1.5rem;
+      border: 1px solid var(--border);
+    }
+    .map-frame iframe { width: 100%; height: 100%; border: none; filter: saturate(.6) contrast(1.05); }
+
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+    /* ──────────────────────────────────────────────
+       FOOTER
+    ────────────────────────────────────────────── */
+    footer {
+      background: var(--text);
+      color: rgba(250,247,242,.6);
+      padding: 3.5rem 0 2rem;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
+      padding-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,.08);
+      margin-bottom: 1.75rem;
+    }
+    .footer-brand img {
+      width: 48px; height: 48px; object-fit: contain;
+      border-radius: 50%; background: rgba(255,255,255,.08);
+      padding: 4px; margin-bottom: 1rem;
+    }
+    .footer-brand p { font-size: .82rem; line-height: 1.8; max-width: 260px; }
+    .footer-col h5 {
+      font-size: .7rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--gold2); margin-bottom: 1rem; font-weight: 500;
+    }
+    .footer-col a {
+      display: block; font-size: .8rem; color: rgba(250,247,242,.55);
+      margin-bottom: .55rem; transition: color .2s;
+    }
+    .footer-col a:hover { color: var(--gold2); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+      font-size: .72rem;
+    }
+    .footer-social { display: flex; gap: .75rem; }
+    .social-btn {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.15);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,.5); font-size: .85rem;
+      transition: all .25s;
+    }
+    .social-btn:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
+
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ──────────────────────────────────────────────
+       MOBILE STICKY BAR
+    ────────────────────────────────────────────── */
+    .mobile-bar {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0;
+      z-index: 80;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      padding: .75rem 1.25rem;
+      justify-content: space-between; align-items: center;
+      box-shadow: 0 -4px 24px rgba(0,0,0,.08);
+    }
+    .mobile-bar-btn {
+      display: flex; flex-direction: column; align-items: center; gap: .25rem;
+      font-size: .6rem; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--text2); cursor: pointer;
+    }
+    .mobile-bar-btn i { font-size: 1.1rem; color: var(--gold); }
+    .mobile-bar-wa {
+      background: #25D366; color: #fff; border: none;
+      padding: .65rem 1.5rem; border-radius: 2px;
+      font-size: .72rem; letter-spacing: .15em; text-transform: uppercase;
+      cursor: pointer; display: flex; gap: .5rem; align-items: center;
+    }
+    @media (max-width: 768px) {
+      .mobile-bar { display: flex; }
+      body { padding-bottom: 72px; }
+    }
+
+    /* ──────────────────────────────────────────────
+       LIGHTBOX
+    ────────────────────────────────────────────── */
+    .lightbox, .video-modal {
+      position: fixed; inset: 0; z-index: 200;
+      background: rgba(250,247,242,.96);
+      display: none; place-items: center;
+      padding: 1.5rem;
+    }
+    .lightbox.open, .video-modal.open { display: grid; }
+    .lb-inner {
+      position: relative; max-width: 900px; width: 100%;
+      display: flex; flex-direction: column; align-items: center; gap: 1.25rem;
+    }
+    .lb-inner img { border-radius: var(--r); max-height: 80vh; width: auto; object-fit: contain; }
+    .lb-close, .vm-close {
+      position: fixed; top: 1.5rem; right: 1.5rem;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--text); color: var(--cream);
+      border: none; font-size: 1.1rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .vm-inner { position: relative; width: 100%; max-width: 900px; }
+    .vm-inner video { width: 100%; border-radius: var(--r); }
+
+    /* ──────────────────────────────────────────────
+       SUCCESS MSG
+    ────────────────────────────────────────────── */
+    .success-msg {
+      display: none;
+      background: #F0FBF4; border: 1px solid #86CFA3; border-radius: var(--r);
+      padding: 1rem 1.25rem;
+      font-size: .82rem; color: #1F6B3A;
+      margin-top: 1rem;
+    }
+
+    /* ═══════════════════════════════════════════
+       LOGO COLOR APPLICATIONS ACROSS THE SITE
+    ═══════════════════════════════════════════ */
+
+    /* Hero — "Candid · Cinematic · Traditional" colored pills */
+    .hero-tag-gold  { color: var(--logo-gold);  border-color: var(--logo-gold); }
+    .hero-tag-green { color: var(--logo-green); border-color: var(--logo-green); }
+    .hero-tag-red   { color: var(--logo-red);   border-color: var(--logo-red); }
+    .hero-tag-blue  { color: var(--logo-blue);  border-color: var(--logo-blue); }
+
+    .style-tag {
+      display: inline-flex; align-items: center; gap: .4rem;
+      font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 500;
+      padding: .35rem .85rem; border-radius: 2px; border: 1px solid currentColor;
+    }
+
+    /* Service cards — each svc number gets a logo color */
+    .svc:nth-child(1) .svc-num { color: var(--logo-gold); }
+    .svc:nth-child(2) .svc-num { color: var(--logo-green); }
+    .svc:nth-child(3) .svc-num { color: var(--logo-red); }
+    .svc:nth-child(4) .svc-num { color: var(--logo-blue); }
+    .svc:nth-child(5) .svc-num { color: var(--logo-gold); }
+    .svc:nth-child(6) .svc-num { color: var(--logo-green); }
+
+    .svc:nth-child(1) { border-top: 3px solid var(--logo-gold); }
+    .svc:nth-child(2) { border-top: 3px solid var(--logo-green); }
+    .svc:nth-child(3) { border-top: 3px solid var(--logo-red); }
+    .svc:nth-child(4) { border-top: 3px solid var(--logo-blue); }
+    .svc:nth-child(5) { border-top: 3px solid var(--logo-gold); }
+    .svc:nth-child(6) { border-top: 3px solid var(--logo-green); }
+
+    .svc:nth-child(1):hover { background: var(--logo-gold-t); }
+    .svc:nth-child(2):hover { background: var(--logo-green-t); }
+    .svc:nth-child(3):hover { background: var(--logo-red-t); }
+    .svc:nth-child(4):hover { background: var(--logo-blue-t); }
+    .svc:nth-child(5):hover { background: var(--logo-gold-t); }
+    .svc:nth-child(6):hover { background: var(--logo-green-t); }
+
+    /* Section label accents */
+    .label-gold  { color: var(--logo-gold) !important; }
+    .label-green { color: var(--logo-green) !important; }
+    .label-red   { color: var(--logo-red) !important; }
+    .label-blue  { color: var(--logo-blue) !important; }
+
+    .divider-gold  { background: var(--logo-gold) !important; }
+    .divider-green { background: var(--logo-green) !important; }
+    .divider-red   { background: var(--logo-red) !important; }
+    .divider-blue  { background: var(--logo-blue) !important; }
+
+    /* Package badges */
+    .pkg-badge-gold  { color: var(--logo-gold) !important; }
+    .pkg-badge-green { color: var(--logo-green) !important; }
+    .pkg-badge-red   { color: var(--logo-red) !important; }
+    .pkg-badge-blue  { color: var(--logo-blue) !important; }
+
+    /* Info card icons — cycling logo colors */
+    .icon-gold  { background: var(--logo-gold-t)  !important; color: var(--logo-gold)  !important; }
+    .icon-green { background: var(--logo-green-t) !important; color: var(--logo-green) !important; }
+    .icon-red   { background: var(--logo-red-t)   !important; color: var(--logo-red)   !important; }
+    .icon-blue  { background: var(--logo-blue-t)  !important; color: var(--logo-blue)  !important; }
+
+    /* Nav links — colored underline on hover */
+    .nav-links a::after {
+      content:''; display:block; height:2px; width:0;
+      transition:width .25s;
+      margin-top:2px;
+    }
+    .nav-links a:nth-child(1)::after { background:var(--logo-gold); }
+    .nav-links a:nth-child(2)::after { background:var(--logo-green); }
+    .nav-links a:nth-child(3)::after { background:var(--logo-red); }
+    .nav-links a:nth-child(4)::after { background:var(--logo-blue); }
+    .nav-links a:nth-child(5)::after { background:var(--logo-gold); }
+    .nav-links a:nth-child(6)::after { background:var(--logo-green); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-links a:hover { color: var(--text) !important; }
+
+    /* Testimonial quote mark — logo red */
+    .testimonial::before { color: var(--logo-red) !important; }
+
+    /* Footer social icons on hover — logo colors */
+    .footer-social a:nth-child(1) .social-btn:hover { background: var(--logo-red); border-color: var(--logo-red); }
+    .footer-social a:nth-child(2) .social-btn:hover { background: var(--logo-green); border-color: var(--logo-green); }
+    .footer-social a:nth-child(3) .social-btn:hover { background: var(--logo-red); border-color: var(--logo-red); }
+
+    /* Reel tag pill — logo colors */
+    .reel-tag-gold  { background: var(--logo-gold)  !important; }
+    .reel-tag-green { background: var(--logo-green) !important; }
+
+    /* Marquee dot — cycle logo colors */
+    .dot-g { color: var(--logo-green) !important; }
+    .dot-r { color: var(--logo-red) !important; }
+    .dot-b { color: var(--logo-blue) !important; }
+
+    /* Hero stat numbers — logo colors */
+    .stat-gold  { color: var(--logo-gold)  !important; }
+    .stat-green { color: var(--logo-green) !important; }
+    .stat-red   { color: var(--logo-red)   !important; }
+
+    /* Package featured check icons */
+    .pkg.featured .pkg-feature i { color: var(--logo-gold) !important; }
+
+    /* ═══════════════════════════════════════════
+       LUXURY SCROLL REVEAL ANIMATIONS
+    ═══════════════════════════════════════════ */
+    .reveal,
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(45px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-45px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(45px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.92);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.active,
+    .reveal-up.active,
+    .reveal-left.active,
+    .reveal-right.active,
+    .reveal-scale.active {
+      opacity: 1 !important;
+      transform: translateY(0) translateX(0) scale(1) !important;
+    }
+
+    /* Stagger Delays */
+    .delay-1 { transition-delay: 80ms !important; }
+    .delay-2 { transition-delay: 160ms !important; }
+    .delay-3 { transition-delay: 240ms !important; }
+    .delay-4 { transition-delay: 320ms !important; }
+    .delay-5 { transition-delay: 400ms !important; }
+    .delay-6 { transition-delay: 480ms !important; }
+
+    /* ═══════════════════════════════════════════
+       COMPREHENSIVE MOBILE RESPONSIVE MASTER STYLES
+    ═══════════════════════════════════════════ */
+    @media (max-width: 992px) {
+      .viewfinder-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+      .atelier-booking-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+      .vibe-pillars-grid { grid-template-columns: 1fr 1fr !important; gap: 1.25rem !important; }
+      .about-grid { grid-template-columns: 1fr !important; gap: 3.5rem !important; }
+      .about-img-float { right: 0 !important; bottom: -1rem !important; width: 52% !important; }
+      .packages-grid, .services-grid { grid-template-columns: 1fr 1fr !important; }
+    }
+
+    @media (max-width: 768px) {
+      html, body { overflow-x: hidden !important; width: 100% !important; }
+      
+      /* Topbar Mobile */
+      .topbar { font-size: .65rem !important; padding: .4rem .5rem !important; letter-spacing: .08em !important; }
+      .topbar span { margin: 0 .35rem !important; }
+
+      /* Nav Mobile */
+      nav { height: 64px !important; padding: 0 1rem !important; }
+      .nav-logo-text { font-size: 1.15rem !important; }
+      .nav-logo-sub { font-size: .52rem !important; letter-spacing: .12em !important; }
+      .nav-logo img { width: 36px !important; height: 36px !important; }
+
+      /* Hero Mobile */
+      #home { min-height: 100svh !important; height: auto !important; padding: 4.5rem 0 3.5rem !important; }
+      .hero-title-italic, #hTitle div:nth-child(2), #hTitle div:nth-child(3) {
+        font-size: clamp(2.6rem, 9.5vw, 4.5rem) !important;
+      }
+      #hCtas { flex-direction: column !important; width: 100% !important; gap: .65rem !important; }
+      #hCtas a { width: 100% !important; justify-content: center !important; text-align: center !important; padding: .85rem 1rem !important; }
+      #hStats { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: .75rem !important; text-align: center !important; margin-top: 2rem !important; padding-top: 1.5rem !important; }
+      #hStats div > div:first-child { font-size: 1.6rem !important; }
+      #hStats div > div:last-child { font-size: .6rem !important; }
+
+      /* Viewfinder HUD Mobile */
+      .viewfinder-box { aspect-ratio: 1 / 1 !important; border-radius: 12px !important; }
+      .aperture-lens-interactive { width: 140px !important; height: 140px !important; }
+      .vf-hud-top, .vf-hud-bottom { font-size: .62rem !important; padding: .6rem .85rem !important; }
+      .vibe-pillars-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+
+      /* Video Reels Mobile */
+      .reels-grid { grid-template-columns: 1fr !important; gap: 1.25rem !important; }
+      .film-player-box-vertical { max-width: 100% !important; width: 280px !important; margin: 0 auto !important; height: 460px !important; }
+
+      /* Gallery Filter Scrollable on Touch */
+      .gallery-filters {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        padding-bottom: .75rem !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+      }
+      .gallery-filters::-webkit-scrollbar { display: none; }
+      .flt { flex-shrink: 0 !important; white-space: nowrap !important; font-size: .68rem !important; padding: .45rem 1rem !important; }
+
+      /* Services & Packages Mobile */
+      .services-grid, .packages-grid { grid-template-columns: 1fr !important; }
+      .svc, .pkg { padding: 1.75rem 1.25rem !important; }
+
+      /* Atelier Estimator & Contact Mobile */
+      .atelier-card, .studio-form-card, .studio-channel-card { padding: 1.5rem 1.15rem !important; }
+      .form-row-2, .form-grid { grid-template-columns: 1fr !important; gap: .85rem !important; }
+      .studio-input-group input, .studio-input-group select, .studio-input-group textarea { font-size: 16px !important; }
+
+      /* Footer Mobile */
+      footer { padding: 3rem 0 5rem !important; }
+      .footer-grid { grid-template-columns: 1fr !important; gap: 2rem !important; text-align: center !important; }
+      .footer-brand p { margin: 0 auto !important; }
+      .footer-bottom { flex-direction: column !important; justify-content: center !important; text-align: center !important; gap: 1.25rem !important; }
+      .footer-social { justify-content: center !important; }
+
+      /* Mobile Action Bar */
+      .mobile-bar { display: flex !important; position: fixed !important; bottom: 0 !important; left: 0 !important; right: 0 !important; z-index: 120 !important; }
+      body { padding-bottom: 74px !important; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 1rem !important; }
+      .topbar { display: none !important; }
+      nav { height: 60px !important; }
+      .mobile-nav { top: 60px !important; }
+      .h2, h2 { font-size: 2rem !important; }
+      .hero-desc { font-size: .85rem !important; margin: 1.25rem 0 1.75rem !important; }
+      .vibe-card { padding: 1.25rem 1rem !important; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    ✦ Now booking 2026 &amp; 2027 weddings · Hyderabad &amp; Destinations
+    <span>•</span>
+    <a href="tel:+919665351481" style="color:var(--gold2)">+91 96653 51481</a>
+    <span>•</span>
+    Open 24 Hours
+  </div>
+
+  <!-- HEADER / NAV -->
+  <header>
+    <nav>
+      <a href="#" class="nav-logo">
+        <img src="assets/images/logo.png" alt="Wide Film Logo" />
+        <div>
+          <div class="nav-logo-text">WIDE FILM</div>
+          <div class="nav-logo-sub">Wedding &amp; Pre-Wedding Films</div>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#films">Films</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
+        <a href="#packages">Packages</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-cta flex gap-s">
+        <a href="tel:+919665351481" class="btn btn-outline" style="padding:.6rem 1.1rem">
+          <i class="fa-solid fa-phone" style="font-size:.75rem"></i> Call
+        </a>
+        <a href="#contact" class="btn btn-dark">Book a Date</a>
+      </div>
+
+      <button class="hamburger" id="ham" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE NAV DRAWER -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#films" class="mobile-link">Films</a>
+    <a href="#portfolio" class="mobile-link">Portfolio</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#packages" class="mobile-link">Packages</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <div class="flex col gap-s" style="margin-top:1rem">
+      <a href="https://wa.me/919665351481?text=Hi%20Wide%20Film!" target="_blank" class="btn btn-wa" style="justify-content:center">
+        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+      <a href="tel:+919665351481" class="btn btn-outline" style="justify-content:center">
+        <i class="fa-solid fa-phone"></i> +91 96653 51481
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       ANIMATED HERO BANNER — Full Screen Cinematic Slideshow
+  ════════════════════════════════════════════ -->
+  <section id="home" style="position:relative;overflow:hidden;height:100svh;min-height:620px;display:flex;align-items:stretch;">
+
+    <!-- ── Slideshow Background ───────────── -->
+    <div id="slideshow" style="position:absolute;inset:0;z-index:0;">
+      <div class="slide active" style="background-image:url('assets/images/banner_mandap.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/images/banner_arch.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/images/gen_hero_couple.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/images/banner_diya.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/images/gen_bridal_portrait.jpg')"></div>
+    </div>
+
+    <!-- ── Overlay Gradient ───────────────── -->
+    <div style="position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,rgba(10,6,2,.82) 0%,rgba(10,6,2,.5) 55%,rgba(10,6,2,.2) 100%);"></div>
+
+
+    <!-- ── Aperture Loader Overlay ────────── -->
+    <div id="apertureOverlay" style="position:absolute;inset:0;z-index:20;background:#FAF7F2;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.25rem;">
+      <div id="apertureRing" style="width:80px;height:80px;position:relative;">
+        <svg viewBox="0 0 80 80" style="width:80px;height:80px;animation:apertureSpin 1.2s cubic-bezier(.6,0,.4,1) forwards;">
+          <defs>
+            <linearGradient id="ag" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#B8922A"/>
+              <stop offset="100%" style="stop-color:#D4A843"/>
+            </linearGradient>
+          </defs>
+          <!-- Aperture blades -->
+          <g fill="url(#ag)" opacity=".9">
+            <ellipse cx="40" cy="20" rx="7" ry="18" transform="rotate(0 40 40)"/>
+            <ellipse cx="40" cy="20" rx="7" ry="18" transform="rotate(60 40 40)"/>
+            <ellipse cx="40" cy="20" rx="7" ry="18" transform="rotate(120 40 40)"/>
+            <ellipse cx="40" cy="20" rx="7" ry="18" transform="rotate(180 40 40)"/>
+            <ellipse cx="40" cy="20" rx="7" ry="18" transform="rotate(240 40 40)"/>
+            <ellipse cx="40" cy="20" rx="7" ry="18" transform="rotate(300 40 40)"/>
+          </g>
+          <circle cx="40" cy="40" r="10" fill="#FAF7F2"/>
+        </svg>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;letter-spacing:.3em;color:#2E2619;text-transform:uppercase;animation:fadeIn .6s .3s both;">WIDE FILM</div>
+    </div>
+
+    <!-- ── Main Content ───────────────────── -->
+    <div style="position:relative;z-index:10;display:flex;flex-direction:column;justify-content:center;width:100%;max-width:860px;padding:clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,5rem);">
+
+      <!-- Eyebrow label -->
+      <div id="hEye" class="banner-anim" style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;opacity:0;transform:translateY(20px);">
+        <span style="display:block;width:36px;height:1px;background:#B8922A;"></span>
+        <span style="font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:#D4A843;font-weight:500;">Est. 2018 &nbsp;·&nbsp; Hyderabad &nbsp;·&nbsp; Candid · Cinematic · Traditional</span>
+      </div>
+
+      <!-- Main Title -->
+      <div id="hTitle" class="banner-anim" style="opacity:0;transform:translateY(30px);">
+        <div style="font-family:'DM Sans',sans-serif;font-size:clamp(1.1rem,2.2vw,1.4rem);font-weight:300;color:rgba(255,255,255,.75);line-height:1.4;margin-bottom:.35rem;">Stories that</div>
+        <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(3.8rem,9.5vw,8rem);font-weight:400;color:#D4A843;line-height:.95;margin-bottom:.1rem;">outlive</div>
+        <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(3.8rem,9.5vw,8rem);font-weight:400;color:#fff;line-height:.95;">generations</div>
+      </div>
+
+      <!-- Sub Text -->
+      <p id="hDesc" class="banner-anim" style="opacity:0;transform:translateY(20px);font-size:clamp(.82rem,1.4vw,1rem);line-height:1.85;color:rgba(255,255,255,.65);max-width:460px;margin:1.75rem 0 2.25rem;">
+        We don't just take pictures — we capture emotions you'll relive forever.<br>
+        Crafting heirloom wedding films from <strong style="color:rgba(255,255,255,.9)">Hyderabad</strong> and beyond.
+      </p>
+
+      <!-- CTAs -->
+      <div id="hCtas" class="banner-anim" style="opacity:0;transform:translateY(20px);display:flex;flex-wrap:wrap;gap:.75rem;">
+        <a href="#films" style="display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 2rem;background:#B8922A;color:#fff;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;border-radius:2px;text-decoration:none;transition:background .25s;" onmouseover="this.style.background='#2E2619'" onmouseout="this.style.background='#B8922A'">
+          <i class="fa-solid fa-play" style="font-size:.6rem;"></i> Watch Films
+        </a>
+        <a href="https://wa.me/919665351481?text=Hi%20Wide%20Film%2C%20I%20would%20like%20to%20inquire%20about%20booking." target="_blank" style="display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 2rem;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.35);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;border-radius:2px;text-decoration:none;backdrop-filter:blur(8px);transition:all .25s;" onmouseover="this.style.background='rgba(255,255,255,.2)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">
+          <i class="fa-brands fa-whatsapp" style="color:#4ADE80;font-size:.9rem;"></i> Enquire Now
+        </a>
+        <a href="tel:+919665351481" style="display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.5rem;background:transparent;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.2);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;border-radius:2px;text-decoration:none;transition:all .25s;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,.5)'" onmouseout="this.style.color='rgba(255,255,255,.6)';this.style.borderColor='rgba(255,255,255,.2)'">
+          <i class="fa-solid fa-phone" style="font-size:.7rem;"></i> +91 96653 51481
+        </a>
+      </div>
+
+      <!-- Stats Row -->
+      <div id="hStats" class="banner-anim" style="opacity:0;transform:translateY(20px);display:flex;gap:2.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.15);">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:#D4A843;line-height:1;">500+</div>
+          <div style="font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:.2rem;">Weddings</div>
+        </div>
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:#D4A843;line-height:1;">8 Yrs</div>
+          <div style="font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:.2rem;">Experience</div>
+        </div>
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:#D4A843;line-height:1;">4.9★</div>
+          <div style="font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:.2rem;">Google Rating</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Slide Dots ─────────────────────── -->
+    <div id="slideDots" style="position:absolute;bottom:2.25rem;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:.6rem;">
+      <button class="sdot active" onclick="goSlide(0)"></button>
+      <button class="sdot" onclick="goSlide(1)"></button>
+      <button class="sdot" onclick="goSlide(2)"></button>
+      <button class="sdot" onclick="goSlide(3)"></button>
+      <button class="sdot" onclick="goSlide(4)"></button>
+    </div>
+
+    <!-- ── Slide Caption ──────────────────── -->
+    <div id="slideCaption" style="position:absolute;bottom:2.5rem;right:2.5rem;z-index:10;text-align:right;">
+      <div style="font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);" id="captionText">Marigold Mandap · Sacred Agni</div>
+    </div>
+
+    <!-- ── Scroll Cue ─────────────────────── -->
+    <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:.35rem;animation:scrollBounce 2s ease-in-out infinite;">
+      <div style="width:1px;height:40px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.5));"></div>
+      <div style="font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.4);">Scroll</div>
+    </div>
+
+  </section>
+
+  <!-- Inline Animation Styles for Banner -->
+  <style>
+    /* Slideshow Slide */
+    .slide {
+      position:absolute;inset:0;
+      background-size:cover;
+      background-position:center;
+      opacity:0;
+      transform:scale(1.08);
+      transition:opacity 1.6s ease, transform 8s ease;
+      z-index:0;
+    }
+    .slide.active {
+      opacity:1;
+      transform:scale(1.0);
+    }
+    .slide.prev {
+      opacity:0;
+      transform:scale(1.02);
+    }
+
+    /* Slide Dots */
+    .sdot {
+      width:24px;height:3px;border-radius:2px;border:none;cursor:pointer;
+      background:rgba(255,255,255,.3);padding:0;
+      transition:all .35s;
+    }
+    .sdot.active { background:#D4A843;width:40px; }
+    .sdot:hover { background:rgba(255,255,255,.6); }
+
+    /* Aperture spin in */
+    @keyframes apertureSpin {
+      0%   { transform:rotate(0deg) scale(1); opacity:1; }
+      60%  { transform:rotate(540deg) scale(1.1); opacity:1; }
+      100% { transform:rotate(720deg) scale(0); opacity:0; }
+    }
+
+    /* Banner element fade-up */
+    .banner-anim-done {
+      opacity:1 !important;
+      transform:translateY(0) !important;
+      transition:opacity .8s ease, transform .8s ease;
+    }
+
+    /* Scroll bounce */
+    @keyframes scrollBounce {
+      0%,100% { transform:translateX(-50%) translateY(0); }
+      50% { transform:translateX(-50%) translateY(8px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity:0; }
+      to { opacity:1; }
+    }
+
+    @media(max-width:768px){
+      #home { height:auto !important; min-height:100svh; }
+      #slideCaption { display:none; }
+    }
+  </style>
+
+  <!-- MARQUEE STRIP -->
+  <div class="marquee-strip">
+    <div class="marquee-track" id="marqueeTrack">
+      <span>WIDE FILM</span><span class="dot">✦</span>
+      <span>Wedding Photography</span><span class="dot">✦</span>
+      <span>Cinematic Films</span><span class="dot">✦</span>
+      <span>Pre-Wedding Shoots</span><span class="dot">✦</span>
+      <span>Hyderabad</span><span class="dot">✦</span>
+      <span>Candid · Cinematic · Traditional</span><span class="dot">✦</span>
+      <span>Banjara Hills Studio</span><span class="dot">✦</span>
+      <span>Est. 2018</span><span class="dot">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span>WIDE FILM</span><span class="dot">✦</span>
+      <span>Wedding Photography</span><span class="dot">✦</span>
+      <span>Cinematic Films</span><span class="dot">✦</span>
+      <span>Pre-Wedding Shoots</span><span class="dot">✦</span>
+      <span>Hyderabad</span><span class="dot">✦</span>
+      <span>Candid · Cinematic · Traditional</span><span class="dot">✦</span>
+      <span>Banjara Hills Studio</span><span class="dot">✦</span>
+      <span>Est. 2018</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       THE WIDE FILM VIBE — INTERACTIVE PHOTOGRAPHY ATELIER (LIGHT THEME)
+  ════════════════════════════════════════════ -->
+  <section id="vibe" style="padding:clamp(4rem,8vw,7rem) 0;background:var(--paper);color:var(--text);position:relative;overflow:hidden;">
+
+    <!-- Ambient aperture gradient glow -->
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(200,150,12,.08) 0%,rgba(42,124,52,.06) 40%,transparent 70%);pointer-events:none;border-radius:50%;"></div>
+
+    <div class="container" style="position:relative;z-index:2;">
+
+      <!-- Section Header -->
+      <div style="text-align:center;max-width:680px;margin:0 auto clamp(3rem,5vw,4.5rem);">
+        <span style="display:inline-block;padding:.3rem .9rem;border:1px solid var(--logo-gold);border-radius:2px;font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--logo-gold);font-weight:500;">
+          The WIDE FILM Vibe
+        </span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:400;color:var(--text);line-height:1.1;margin-top:.75rem;">
+          Capturing stories that<br><em style="font-family:'Playfair Display',serif;color:var(--logo-gold);">outlive generations</em>
+        </h2>
+        <p style="font-size:.85rem;color:var(--muted);margin-top:.75rem;">
+          Our emblem represents the 4 pillars of cinema optics: Golden Hour warmth, organic family legacy, passionate color grading, and timeless perspective.
+        </p>
+      </div>
+
+      <!-- Interactive Viewfinder Camera Grid -->
+      <div class="viewfinder-grid">
+
+        <!-- Left: Interactive Camera Viewfinder HUD Box -->
+        <div class="viewfinder-box" id="viewfinderBox" onclick="triggerCameraSnap()">
+
+          <!-- Viewfinder Brackets -->
+          <div class="vf-corner vf-tl"></div>
+          <div class="vf-corner vf-tr"></div>
+          <div class="vf-corner vf-bl"></div>
+          <div class="vf-corner vf-br"></div>
+
+          <!-- HUD Status Header -->
+          <div class="vf-hud-top">
+            <span class="vf-rec-badge"><span class="rec-dot"></span> REC 4K RAW</span>
+            <span style="letter-spacing:.15em;color:var(--text2);">ISO 100 · F/1.4 · 1/250s</span>
+          </div>
+
+          <!-- Shutter Flash Overlay -->
+          <div class="shutter-flash-layer" id="shutterFlash"></div>
+
+          <!-- Central Animated Aperture Lens SVG -->
+          <div class="aperture-lens-interactive" id="apertureLens">
+            <svg viewBox="0 0 200 200" width="100%" height="100%" class="lens-svg">
+              <!-- Outer Ring -->
+              <circle cx="100" cy="100" r="92" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="4 4" />
+              <circle cx="100" cy="100" r="85" fill="none" stroke="var(--logo-gold)" stroke-width="1.5" />
+
+              <!-- 4 Logo Aperture Blades -->
+              <!-- Blade 1: Gold -->
+              <path class="blade blade-gold" d="M100,20 C140,20 180,60 180,100 C150,80 120,70 100,20 Z" fill="var(--logo-gold)" opacity=".85" />
+              <!-- Blade 2: Crimson Red -->
+              <path class="blade blade-red" d="M180,100 C180,140 140,180 100,180 C120,150 130,120 180,100 Z" fill="var(--logo-red)" opacity=".85" />
+              <!-- Blade 3: Cobalt Blue -->
+              <path class="blade blade-blue" d="M100,180 C60,180 20,140 20,100 C50,120 80,130 100,180 Z" fill="var(--logo-blue)" opacity=".85" />
+              <!-- Blade 4: Forest Green -->
+              <path class="blade blade-green" d="M20,100 C20,60 60,20 100,20 C80,50 70,80 20,100 Z" fill="var(--logo-green)" opacity=".85" />
+
+              <!-- Center Viewfinder Crosshair -->
+              <circle cx="100" cy="100" r="28" fill="var(--cream)" stroke="var(--logo-gold)" stroke-width="1.5" />
+              <line x1="90" y1="100" x2="110" y2="100" stroke="var(--text)" stroke-width="1" />
+              <line x1="100" y1="90" x2="100" y2="110" stroke="var(--text)" stroke-width="1" />
+            </svg>
+
+            <!-- Center Silhouette image reveal -->
+            <div class="lens-photo-reveal" id="lensPhoto">
+              <img src="assets/images/gen_hero_couple.jpg" alt="WIDE FILM Wedding Couple Silhouette" />
+            </div>
+          </div>
+
+          <!-- Bottom HUD Footer -->
+          <div class="vf-hud-bottom">
+            <span style="color:var(--text2);">WIDE FILM CINEMATOGRAPHY</span>
+            <span class="vf-snap-hint"><i class="fa-solid fa-camera"></i> Click Viewfinder To Snap</span>
+          </div>
+        </div>
+
+        <!-- Right: 4 Vibe Pillars Cards -->
+        <div class="vibe-pillars-grid">
+
+          <!-- Pillar 1: Gold -->
+          <div class="vibe-card" onmouseover="activateBlade('gold')" onmouseout="resetBlades()">
+            <div class="vibe-icon-box icon-gold">
+              <i class="fa-solid fa-sun"></i>
+            </div>
+            <div>
+              <div class="vibe-tag label-gold">01 &nbsp;·&nbsp; Golden Hour Warmth</div>
+              <h3 class="vibe-title">Cinema-Grade Light</h3>
+              <p class="vibe-desc">We frame every ritual during peak golden hour warmth, rendering glowing skin tones and timeless heirloom aesthetics.</p>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Green -->
+          <div class="vibe-card" onmouseover="activateBlade('green')" onmouseout="resetBlades()">
+            <div class="vibe-icon-box icon-green">
+              <i class="fa-solid fa-tree"></i>
+            </div>
+            <div>
+              <div class="vibe-tag label-green">02 &nbsp;·&nbsp; Tree of Life</div>
+              <h3 class="vibe-title">Organic Unscripted Moments</h3>
+              <p class="vibe-desc">Like a flourishing tree, we capture authentic unscripted laughter, emotional kanyadaan rituals, and family roots.</p>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Red -->
+          <div class="vibe-card" onmouseover="activateBlade('red')" onmouseout="resetBlades()">
+            <div class="vibe-icon-box icon-red">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <div>
+              <div class="vibe-tag label-red">03 &nbsp;·&nbsp; Crimson Passion</div>
+              <h3 class="vibe-title">Hollywood Colour Grading</h3>
+              <p class="vibe-desc">Custom DaVinci Resolve color profiles crafted specifically to make bridal silk red, gold zari, and royal attire pop.</p>
+            </div>
+          </div>
+
+          <!-- Pillar 4: Blue -->
+          <div class="vibe-card" onmouseover="activateBlade('blue')" onmouseout="resetBlades()">
+            <div class="vibe-icon-box icon-blue">
+              <i class="fa-solid fa-plane-up"></i>
+            </div>
+            <div>
+              <div class="vibe-tag label-blue">04 &nbsp;·&nbsp; Flight &amp; Motion</div>
+              <h3 class="vibe-title">Licensed Aerial Perspective</h3>
+              <p class="vibe-desc">Soaring 4K drone cinematography giving your wedding film a grand, sweeping royal Nizam palace scale.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Vibe Section CSS -->
+  <style>
+    .viewfinder-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.2fr;
+      gap: clamp(2.5rem, 5vw, 4.5rem);
+      align-items: center;
+    }
+    .viewfinder-box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: var(--cream);
+      border: 2px solid var(--logo-gold);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 16px 40px rgba(46,38,25,.08);
+      user-select: none;
+    }
+
+    /* Viewfinder Corner Brackets */
+    .vf-corner {
+      position: absolute; width: 20px; height: 20px;
+      border: 2px solid var(--logo-gold); z-index: 3;
+    }
+    .vf-tl { top: 1rem; left: 1rem; border-right: none; border-bottom: none; }
+    .vf-tr { top: 1rem; right: 1rem; border-left: none; border-bottom: none; }
+    .vf-bl { bottom: 1rem; left: 1rem; border-right: none; border-top: none; }
+    .vf-br { bottom: 1rem; right: 1rem; border-left: none; border-top: none; }
+
+    /* HUD Top & Bottom */
+    .vf-hud-top {
+      position: absolute; top: 1.2rem; left: 2.5rem; right: 2.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: .62rem; color: var(--text2); font-family: monospace; z-index: 3;
+    }
+    .vf-rec-badge {
+      display: flex; align-items: center; gap: .4rem;
+      color: #D32F2F; font-weight: bold;
+    }
+    .rec-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: #D32F2F;
+      animation: recBlink 1.2s infinite;
+    }
+    @keyframes recBlink { 0%, 100% { opacity: 1; } 50% { opacity: .2; } }
+
+    .vf-hud-bottom {
+      position: absolute; bottom: 1.2rem; left: 2.5rem; right: 2.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: .62rem; color: var(--text2); font-family: monospace; z-index: 3;
+    }
+    .vf-snap-hint {
+      color: var(--logo-gold); display: flex; align-items: center; gap: .4rem; font-weight: 500;
+    }
+
+    /* Camera Flash Layer */
+    .shutter-flash-layer {
+      position: absolute; inset: 0; background: #fff; opacity: 0;
+      pointer-events: none; z-index: 10; transition: opacity .15s ease-out;
+    }
+
+    /* Aperture Lens SVG & Animation */
+    .aperture-lens-interactive {
+      position: relative;
+      width: 220px; height: 220px;
+      transition: transform .4s ease;
+      z-index: 2;
+    }
+    .viewfinder-box:hover .aperture-lens-interactive {
+      transform: scale(1.08) rotate(45deg);
+    }
+    .lens-svg {
+      transition: transform .6s ease;
+    }
+    .blade {
+      transition: transform .4s ease, opacity .4s ease, fill .4s ease;
+      transform-origin: 100px 100px;
+    }
+
+    /* Center photo reveal inside lens */
+    .lens-photo-reveal {
+      position: absolute;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 90px; height: 90px; border-radius: 50%;
+      overflow: hidden; opacity: 0; transition: opacity .4s ease, transform .4s ease;
+      border: 2px solid var(--logo-gold);
+    }
+    .lens-photo-reveal img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .viewfinder-box.snapped .lens-photo-reveal {
+      opacity: 1; transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    /* Vibe Pillar Cards */
+    .vibe-pillars-grid {
+      display: flex; flex-direction: column; gap: 1.25rem;
+    }
+    .vibe-card {
+      display: flex; gap: 1.25rem; align-items: flex-start;
+      padding: 1.15rem 1.5rem;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: all .3s ease;
+      cursor: pointer;
+    }
+    .vibe-card:hover {
+      background: var(--white);
+      border-color: var(--logo-gold);
+      transform: translateX(6px);
+      box-shadow: 0 8px 24px rgba(46,38,25,.06);
+    }
+    .vibe-icon-box {
+      width: 44px; height: 44px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+    .vibe-tag {
+      font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 500;
+      margin-bottom: .25rem;
+    }
+    .vibe-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; font-weight: 400; color: var(--text); line-height: 1.2;
+    }
+    .vibe-desc {
+      font-size: .78rem; color: var(--text2); margin-top: .3rem; line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .viewfinder-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+
+  <!-- Interactive Camera Animation JS -->
+  <script>
+    function triggerCameraSnap() {
+      const flash = document.getElementById('shutterFlash');
+      const box = document.getElementById('viewfinderBox');
+      
+      // Flash effect
+      flash.style.opacity = '1';
+      setTimeout(() => { flash.style.opacity = '0'; }, 180);
+
+      // Toggle snapped photo reveal inside lens
+      box.classList.toggle('snapped');
+    }
+
+    function activateBlade(color) {
+      const blades = document.querySelectorAll('.blade');
+      blades.forEach(b => {
+        if(b.classList.contains('blade-' + color)) {
+          b.style.opacity = '1';
+          b.style.transform = 'scale(1.12)';
+        } else {
+          b.style.opacity = '.3';
+          b.style.transform = 'scale(0.95)';
+        }
+      });
+    }
+
+    function resetBlades() {
+      document.querySelectorAll('.blade').forEach(b => {
+        b.style.opacity = '.85';
+        b.style.transform = 'scale(1)';
+      });
+    }
+  </script>
+
+  <!-- ═══════════════════════════════════════════
+       CINEMA REELS — LUXURY MAGAZINE SHOWCASE
+  ════════════════════════════════════════════ -->
+
+  <section id="films" style="padding:clamp(4rem,8vw,7rem) 0;background:var(--cream);">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div style="text-align:center;max-width:650px;margin:0 auto clamp(3rem,6vw,4.5rem);">
+        <span class="label label-blue">Cinematic Films</span>
+        <span class="divider divider-center"></span>
+        <h2 class="h2">The art of wedding cinema</h2>
+        <p class="body-sm" style="margin-top:.75rem;">
+          4K feature-quality films crafted with cinema-grade optics, Hollywood colour grading, and studio sound.
+        </p>
+      </div>
+
+      <!-- 2-Column Luxury Video Showcase (No Boxed Cards!) -->
+      <div class="films-grid">
+
+        <!-- ── Film 01 ── -->
+        <div class="film-item">
+          <div class="film-player-box film-player-box-vertical">
+            <video id="rv1" loop playsinline poster="assets/images/gen_hero_couple.jpg">
+              <source src="assets/videos/reel_1.mp4" type="video/mp4" />
+            </video>
+
+            <!-- Video Overlay Gradient -->
+            <div class="film-player-overlay">
+              <button class="film-main-play" id="fpo1" onclick="filmTogglePlay('rv1','fpo1')" aria-label="Play Video">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <button class="film-mute-icon" onclick="toggleMute('rv1',this)" aria-label="Mute">
+                <i class="fa-solid fa-volume-xmark"></i>
+              </button>
+            </div>
+
+            <span class="film-category-badge badge-gold">9:16 Instagram Reel</span>
+          </div>
+
+          <div class="film-caption" style="justify-content:center;text-align:center;margin-top:.5rem;">
+            <div class="film-num">01</div>
+            <div>
+              <h3 class="film-title">A Royal Nizam Celebration</h3>
+              <p class="film-meta">Candid · Heritage Palace · Hyderabad</p>
+              <div class="film-actions" style="justify-content:center;">
+                <button class="film-btn-text" onclick="filmTogglePlay('rv1','fpo1')">
+                  <i class="fa-solid fa-play"></i> Play Reel
+                </button>
+                <button class="film-btn-link" onclick="openVM('assets/videos/reel_1.mp4','A Royal Nizam Celebration')">
+                  Fullscreen <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Film 02 ── -->
+        <div class="film-item">
+          <div class="film-player-box film-player-box-horizontal">
+            <video id="rv2" loop playsinline poster="assets/images/gen_prewedding.jpg">
+              <source src="assets/videos/reel_2.mp4" type="video/mp4" />
+            </video>
+
+
+            <!-- Video Overlay Gradient -->
+            <div class="film-player-overlay">
+              <button class="film-main-play" id="fpo2" onclick="filmTogglePlay('rv2','fpo2')" aria-label="Play Video">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <button class="film-mute-icon" onclick="toggleMute('rv2',this)" aria-label="Mute">
+                <i class="fa-solid fa-volume-xmark"></i>
+              </button>
+            </div>
+
+            <span class="film-category-badge badge-green">Pre-Wedding Film</span>
+          </div>
+
+          <div class="film-caption">
+            <div class="film-num">02</div>
+            <div>
+              <h3 class="film-title">Whispers of Golden Hour</h3>
+              <p class="film-meta">Cinematic Romance · Palace Garden</p>
+              <div class="film-actions">
+                <button class="film-btn-text" onclick="filmTogglePlay('rv2','fpo2')">
+                  <i class="fa-solid fa-play"></i> Play Cinema Teaser
+                </button>
+                <button class="film-btn-link" onclick="openVM('assets/videos/reel_2.mp4','Whispers of Golden Hour')">
+                  Fullscreen <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end grid -->
+
+      <!-- Cinema Specs Bar -->
+      <div class="cinema-specs-bar">
+        <div class="spec-item">
+          <i class="fa-solid fa-camera-retro spec-icon icon-gold"></i>
+          <div>
+            <div class="spec-title">Sony FX Cinema 4K</div>
+            <div class="spec-sub">10-Bit 4:2:2 Colour</div>
+          </div>
+        </div>
+        <div class="spec-item">
+          <i class="fa-solid fa-plane-up spec-icon icon-blue"></i>
+          <div>
+            <div class="spec-title">Licensed Aerial Drone</div>
+            <div class="spec-sub">4K 60fps Perspective</div>
+          </div>
+        </div>
+        <div class="spec-item">
+          <i class="fa-solid fa-sliders spec-icon icon-red"></i>
+          <div>
+            <div class="spec-title">Hollywood Colour Grading</div>
+            <div class="spec-sub">DaVinci Resolve Studio</div>
+          </div>
+        </div>
+        <div class="spec-item">
+          <i class="fa-brands fa-instagram spec-icon icon-green"></i>
+          <div>
+            <div class="spec-title">24-Hour Same-Day Reel</div>
+            <div class="spec-sub">Optimized for Social Sharing</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Film Showcase CSS -->
+  <style>
+    .films-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(2rem, 4vw, 3.5rem);
+    }
+    .film-item {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .film-player-box {
+      position: relative;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #181410;
+      box-shadow: 0 12px 40px rgba(0,0,0,.14);
+    }
+    .film-player-box-vertical {
+      aspect-ratio: 9 / 16;
+      max-width: 290px;
+      height: 490px;
+      margin: 0 auto;
+      border-radius: 20px;
+      border: 3px solid rgba(217,206,192,.4);
+    }
+    .film-player-box-horizontal {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+    }
+    .film-player-box video {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+    #rv1 {
+      transform: rotate(-90deg) scale(1.78);
+    }
+
+
+    .film-player-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.45) 0%, transparent 60%);
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity .35s ease, background .3s;
+    }
+    .film-player-box:hover .film-player-overlay {
+      background: linear-gradient(to top, rgba(0,0,0,.6) 0%, rgba(0,0,0,.15) 100%);
+    }
+
+    /* ── Hide play buttons & badges while playing (reveal on hover) ── */
+    .film-player-box.is-playing .film-player-overlay {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .film-player-box.is-playing:hover .film-player-overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .film-player-box.is-playing .film-category-badge {
+      opacity: 0;
+      transition: opacity .35s ease;
+    }
+    .film-player-box.is-playing:hover .film-category-badge {
+      opacity: 1;
+    }
+
+    .film-main-play {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: var(--cream);
+      color: var(--text);
+      border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,.3);
+      transition: transform .3s ease, background .3s ease, color .3s ease;
+      padding-left: 4px;
+    }
+
+    .film-player-box:hover .film-main-play {
+      transform: scale(1.1);
+      background: var(--logo-gold);
+      color: #fff;
+    }
+    .film-main-play.playing {
+      background: rgba(255,255,255,.2);
+      color: #fff;
+      backdrop-filter: blur(8px);
+      padding-left: 0;
+    }
+    .film-mute-icon {
+      position: absolute; top: 1rem; right: 1rem;
+      width: 34px; height: 34px; border-radius: 50%;
+      background: rgba(0,0,0,.4);
+      border: 1px solid rgba(255,255,255,.25);
+      color: #fff; font-size: .75rem;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      backdrop-filter: blur(4px);
+      transition: background .25s;
+    }
+    .film-mute-icon:hover { background: rgba(0,0,0,.7); }
+
+    .film-category-badge {
+      position: absolute; top: 1rem; left: 1rem;
+      font-size: .65rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 500;
+      padding: .35rem .85rem; border-radius: 2px;
+      color: #fff; backdrop-filter: blur(6px);
+    }
+    .badge-gold  { background: rgba(200,150,12,.85); }
+    .badge-green { background: rgba(42,124,52,.85); }
+
+    .film-caption {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      padding: 0 .25rem;
+    }
+    .film-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem; font-weight: 300;
+      line-height: 1; color: var(--border);
+    }
+    .film-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; font-weight: 500;
+      color: var(--text); line-height: 1.2;
+      margin-bottom: .25rem;
+    }
+    .film-meta {
+      font-size: .78rem; color: var(--muted);
+      letter-spacing: .06em; margin-bottom: .85rem;
+    }
+    .film-actions {
+      display: flex; gap: 1.25rem; align-items: center;
+    }
+    .film-btn-text {
+      background: none; border: none; cursor: pointer;
+      font-size: .72rem; letter-spacing: .15em; text-transform: uppercase;
+      font-weight: 500; color: var(--text);
+      display: flex; align-items: center; gap: .4rem;
+      transition: color .2s; padding: 0;
+    }
+    .film-btn-text:hover { color: var(--logo-gold); }
+    .film-btn-link {
+      background: none; border: none; cursor: pointer;
+      font-size: .72rem; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--muted); display: flex; align-items: center; gap: .35rem;
+      transition: color .2s; padding: 0;
+    }
+    .film-btn-link:hover { color: var(--text); }
+
+    .cinema-specs-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .spec-item {
+      display: flex; gap: 1rem; align-items: center;
+    }
+    .spec-icon {
+      width: 44px; height: 44px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .spec-title {
+      font-size: .8rem; font-weight: 500; color: var(--text); line-height: 1.3;
+    }
+    .spec-sub {
+      font-size: .68rem; color: var(--muted); letter-spacing: .05em; margin-top: .15rem;
+    }
+
+    @media (max-width: 900px) {
+      .films-grid { grid-template-columns: 1fr; }
+      .cinema-specs-bar { grid-template-columns: repeat(2, 1fr); gap: 1.75rem; }
+    }
+    @media (max-width: 540px) {
+      .cinema-specs-bar { grid-template-columns: 1fr; }
+    }
+  </style>
+
+
+
+
+
+  <!-- ═══════════════════════════════════════════
+       PORTFOLIO GALLERY
+  ════════════════════════════════════════════ -->
+  <section class="alt" id="portfolio">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="label label-red">Our Work</span>
+        <span class="divider divider-center"></span>
+        <h2 class="h2">A visual poetry gallery</h2>
+        <p class="body-sm" style="max-width:480px;margin:.75rem auto 0">
+          Real couples, real emotions — curated from our finest wedding films across Hyderabad and beyond.
+        </p>
+      </div>
+
+      <div class="gallery-filters">
+        <button class="flt active" data-f="all">All Stories</button>
+        <button class="flt" data-f="bridal">Bridal</button>
+        <button class="flt" data-f="prewedding">Pre-Wedding</button>
+        <button class="flt" data-f="candid">Candid &amp; Rituals</button>
+      </div>
+
+      <div class="gallery-masonry" id="galleryGrid">
+
+        <div class="g-item" data-cat="bridal" onclick="openLB('assets/images/gen_bridal_portrait.jpg','The Radiant Bride','South Indian Temple Tradition')">
+          <img src="assets/images/gen_bridal_portrait.jpg" alt="Bridal portrait" loading="lazy" />
+          <div class="g-overlay"><h4>The Radiant Bride</h4><p>South Indian Temple Tradition</p></div>
+        </div>
+
+        <div class="g-item" data-cat="prewedding" onclick="openLB('assets/images/gen_prewedding.jpg','Eternal Walks','Heritage Palace Garden')">
+          <img src="assets/images/gen_prewedding.jpg" alt="Pre-wedding couple" loading="lazy" />
+          <div class="g-overlay"><h4>Eternal Walks</h4><p>Heritage Palace Garden</p></div>
+        </div>
+
+        <div class="g-item" data-cat="candid" onclick="openLB('assets/images/gen_candid.jpg','Sacred Goodbye','Kanyadaan — The Emotional Farewell')">
+          <img src="assets/images/gen_candid.jpg" alt="Candid emotional moment" loading="lazy" />
+          <div class="g-overlay"><h4>Sacred Goodbye</h4><p>Kanyadaan — A Father's Blessing</p></div>
+        </div>
+
+        <div class="g-item" data-cat="candid" onclick="openLB('assets/images/gen_aerial.jpg','Mandap from Above','Aerial Ceremony View')">
+          <img src="assets/images/gen_aerial.jpg" alt="Aerial wedding ceremony" loading="lazy" />
+          <div class="g-overlay"><h4>Mandap from Above</h4><p>Aerial Ceremony Cinematography</p></div>
+        </div>
+
+        <div class="g-item" data-cat="bridal" onclick="openLB('assets/images/gen_mehendi.jpg','Hands of Promise','Bridal Mehendi Detail')">
+          <img src="assets/images/gen_mehendi.jpg" alt="Mehendi hands" loading="lazy" />
+          <div class="g-overlay"><h4>Hands of Promise</h4><p>Bridal Mehendi &amp; Jewellery</p></div>
+        </div>
+
+        <div class="g-item" data-cat="bridal" onclick="openLB('assets/images/gen_hero_couple.jpg','The Nizam Courtyard','Heritage Palace — Hyderabad')">
+          <img src="assets/images/gen_hero_couple.jpg" alt="Couple at palace" loading="lazy" />
+          <div class="g-overlay"><h4>The Nizam Courtyard</h4><p>Heritage Palace — Hyderabad</p></div>
+        </div>
+
+        <div class="g-item" data-cat="prewedding" onclick="openLB('assets/images/portfolio_1.webp','Garden of Vows','Pre-Wedding Shoot')">
+          <img src="assets/images/portfolio_1.webp" alt="Portfolio 1" loading="lazy" />
+          <div class="g-overlay"><h4>Garden of Vows</h4><p>Pre-Wedding Film Still</p></div>
+        </div>
+
+        <div class="g-item" data-cat="candid" onclick="openLB('assets/images/portfolio_2.webp','Unscripted Moments','Candid Wedding')">
+          <img src="assets/images/portfolio_2.webp" alt="Portfolio 2" loading="lazy" />
+          <div class="g-overlay"><h4>Unscripted Moments</h4><p>Candid Wedding</p></div>
+        </div>
+
+        <div class="g-item" data-cat="bridal" onclick="openLB('assets/images/portfolio_3.webp','Golden Drape','Bridal Portraits')">
+          <img src="assets/images/portfolio_3.webp" alt="Portfolio 3" loading="lazy" />
+          <div class="g-overlay"><h4>Golden Drape</h4><p>Bridal Portraits</p></div>
+        </div>
+
+        <div class="g-item" data-cat="prewedding" onclick="openLB('assets/images/portfolio_4.webp','Together','Pre-Wedding')">
+          <img src="assets/images/portfolio_4.webp" alt="Portfolio 4" loading="lazy" />
+          <div class="g-overlay"><h4>Together</h4><p>Pre-Wedding Story</p></div>
+        </div>
+
+        <div class="g-item" data-cat="candid" onclick="openLB('assets/images/portfolio_5.webp','Ritual & Love','Ceremony Moments')">
+          <img src="assets/images/portfolio_5.webp" alt="Portfolio 5" loading="lazy" />
+          <div class="g-overlay"><h4>Ritual &amp; Love</h4><p>Ceremony Moments</p></div>
+        </div>
+
+        <div class="g-item" data-cat="bridal" onclick="openLB('assets/images/portfolio_6.webp','Elegance','Portrait Session')">
+          <img src="assets/images/portfolio_6.webp" alt="Portfolio 6" loading="lazy" />
+          <div class="g-overlay"><h4>Elegance</h4><p>Bridal Portrait Session</p></div>
+        </div>
+
+      </div>
+
+      <div class="text-center" style="margin-top:3rem">
+        <a href="https://wa.me/919665351481?text=Hi%20Wide%20Film%2C%20please%20share%20your%20full%20portfolio%20link." target="_blank" class="btn btn-outline">
+          <i class="fa-brands fa-whatsapp" style="color:#25D366"></i>
+          Request Full Private Gallery
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SERVICES
+  ════════════════════════════════════════════ -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">What We Offer</span>
+        <span class="divider"></span>
+        <h2 class="h2">Crafted for eternity</h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="svc">
+          <div class="svc-num">01</div>
+          <h3 class="h3">Candid Wedding Photography</h3>
+          <p>Unposed, authentic moments captured as they happen. Prime-lens low-light portraits, stolen glances, and tears that tell the whole story.</p>
+        </div>
+        <div class="svc">
+          <div class="svc-num">02</div>
+          <h3 class="h3">Cinematic 4K Wedding Films</h3>
+          <p>Feature-film storytelling with multi-camera setups, studio-grade audio, drone establishing shots, and Hollywood-style colour grading.</p>
+        </div>
+        <div class="svc">
+          <div class="svc-num">03</div>
+          <h3 class="h3">Pre-Wedding &amp; Destination</h3>
+          <p>Tailored concept shoots at heritage palaces, lakesides, or international locations. Moodboard guidance and styling consultation included.</p>
+        </div>
+        <div class="svc">
+          <div class="svc-num">04</div>
+          <h3 class="h3">Traditional Ritual Coverage</h3>
+          <p>Complete documentation of Haldi, Pellikuthuru, Mehendi, Sangeet, Muhurtham and Reception — not a moment missed.</p>
+        </div>
+        <div class="svc">
+          <div class="svc-num">05</div>
+          <h3 class="h3">Luxury Heirloom Albums</h3>
+          <p>Museum-grade flush-mount albums in Italian leather or linen, with golden foil debossed typography and 100-year archival paper.</p>
+        </div>
+        <div class="svc">
+          <div class="svc-num">06</div>
+          <h3 class="h3">Same-Day Social Reels</h3>
+          <p>High-energy 9:16 vertical reels delivered within 24 hours of your ceremony — trending-audio synced and ready for Instagram.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PACKAGES
+  ════════════════════════════════════════════ -->
+  <section class="paper" id="packages">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="label label-gold">Investment</span>
+        <span class="divider divider-center"></span>
+        <h2 class="h2">Wedding collections</h2>
+        <p class="body-sm" style="max-width:460px;margin:.75rem auto 0">
+          Transparent all-inclusive packages designed for intimate elopements to grand 3-day royal celebrations.
+        </p>
+      </div>
+
+      <!-- Luxury Wedding Menu Collections Grid -->
+      <div class="collections-grid">
+
+        <!-- ── 01. Intimate ── -->
+        <div class="collection-card">
+          <div class="coll-header">
+            <span class="coll-tag tag-green">Essential Coverage</span>
+            <h3 class="coll-title">Intimate</h3>
+            <p class="coll-sub">1-Day Wedding or Engagement</p>
+          </div>
+          <div class="coll-divider"></div>
+          <ul class="coll-list">
+            <li><span class="coll-bullet">✦</span> 1 Senior Candid Photographer</li>
+            <li><span class="coll-bullet">✦</span> 1 Traditional Photographer</li>
+            <li><span class="coll-bullet">✦</span> 1 Cinematic Videographer</li>
+            <li><span class="coll-bullet">✦</span> 200+ Retouched Master Photos</li>
+            <li><span class="coll-bullet">✦</span> 3-Min Cinematic Highlight Film</li>
+            <li><span class="coll-bullet">✦</span> 1-Year Private Cloud Gallery</li>
+          </ul>
+          <a href="https://wa.me/919665351481?text=Hi%20Wide%20Film%2C%20I%20am%20interested%20in%20the%20Intimate%20Collection." target="_blank" class="coll-btn">
+            Inquire via WhatsApp
+          </a>
+        </div>
+
+        <!-- ── 02. Grand (FEATURED) ── -->
+        <div class="collection-card coll-featured">
+          <div class="coll-badge-top">⭐ Most Loved by Couples</div>
+          <div class="coll-header">
+            <span class="coll-tag tag-gold">2-Day Festivities</span>
+            <h3 class="coll-title">Grand</h3>
+            <p class="coll-sub">Sangeet + Wedding &amp; Reception</p>
+          </div>
+          <div class="coll-divider divider-gold"></div>
+          <ul class="coll-list">
+            <li><span class="coll-bullet bullet-gold">✦</span> 2 Senior Candid Photographers</li>
+            <li><span class="coll-bullet bullet-gold">✦</span> 2 Cinematic 4K Videographers</li>
+            <li><span class="coll-bullet bullet-gold">✦</span> Licensed 4K Aerial Drone</li>
+            <li><span class="coll-bullet bullet-gold">✦</span> Pre-Wedding Shoot Included</li>
+            <li><span class="coll-bullet bullet-gold">✦</span> 400+ Colour-Graded Photos</li>
+            <li><span class="coll-bullet bullet-gold">✦</span> 5-Min Film + 24-Hr Instagram Reel</li>
+            <li><span class="coll-bullet bullet-gold">✦</span> 1 Handcrafted Leather Album</li>
+          </ul>
+          <a href="https://wa.me/919665351481?text=Hi%20Wide%20Film%2C%20I%20am%20interested%20in%20the%20Grand%20Collection." target="_blank" class="coll-btn btn-gold-fill">
+            <i class="fa-brands fa-whatsapp"></i> Reserve Your Date
+          </a>
+        </div>
+
+        <!-- ── 03. Royal ── -->
+        <div class="collection-card">
+          <div class="coll-header">
+            <span class="coll-tag tag-blue">Luxury Bespoke</span>
+            <h3 class="coll-title">Royal</h3>
+            <p class="coll-sub">3-Day &amp; Destination Celebrations</p>
+          </div>
+          <div class="coll-divider"></div>
+          <ul class="coll-list">
+            <li><span class="coll-bullet">✦</span> 8-Member Elite Crew &amp; Director</li>
+            <li><span class="coll-bullet">✦</span> Multi-Camera 4K + Dual Drones</li>
+            <li><span class="coll-bullet">✦</span> Full 3-Day Festivities Coverage</li>
+            <li><span class="coll-bullet">✦</span> 2 Heirloom Albums + Parent Books</li>
+            <li><span class="coll-bullet">✦</span> Same-Day Live Screening Teaser</li>
+            <li><span class="coll-bullet">✦</span> Custom Wooden Flash Drive Vault</li>
+          </ul>
+          <a href="https://wa.me/919665351481?text=Hi%20Wide%20Film%2C%20I%20am%20planning%20a%20Royal%20Destination%20Wedding." target="_blank" class="coll-btn">
+            Inquire via WhatsApp
+          </a>
+        </div>
+
+      </div><!-- end grid -->
+
+      <!-- Custom Estimator Teaser -->
+      <div style="text-align:center;margin-top:3.5rem;">
+        <p class="body-sm" style="color:var(--text2);">
+          Need a tailored package for your destination or multi-day wedding?
+          <a href="#estimator" style="color:var(--logo-gold);font-weight:500;text-decoration:underline;margin-left:.25rem;">Use our Instant Package Estimator ↓</a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Collections CSS -->
+  <style>
+    .collections-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1140px;
+      margin: 0 auto;
+      align-items: stretch;
+    }
+    .collection-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: clamp(2rem, 3vw, 2.5rem) clamp(1.5rem, 2.5vw, 2rem);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    }
+    .collection-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(46,38,25,.08);
+      border-color: var(--logo-gold);
+    }
+    .collection-card.coll-featured {
+      background: var(--white);
+      border: 2px solid var(--logo-gold);
+      box-shadow: 0 12px 36px rgba(200,150,12,.12);
+    }
+    .coll-badge-top {
+      position: absolute;
+      top: -14px; left: 50%; transform: translateX(-50%);
+      background: var(--logo-gold);
+      color: #fff;
+      font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 500;
+      padding: .35rem 1rem; border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(200,150,12,.3);
+      white-space: nowrap;
+    }
+    .coll-header { text-align: center; }
+    .coll-tag {
+      font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 500;
+      display: inline-block; margin-bottom: .75rem;
+    }
+    .tag-green { color: var(--logo-green); }
+    .tag-gold  { color: var(--logo-gold); }
+    .tag-blue  { color: var(--logo-blue); }
+
+    .coll-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem; font-weight: 400; color: var(--text);
+      line-height: 1.1; margin-bottom: .35rem;
+    }
+    .coll-sub {
+      font-size: .78rem; color: var(--muted); letter-spacing: .04em;
+    }
+    .coll-divider {
+      height: 1px; width: 40px; background: var(--border);
+      margin: 1.5rem auto;
+    }
+    .divider-gold { background: var(--logo-gold); width: 60px; }
+
+    .coll-list {
+      list-style: none; flex: 1; margin-bottom: 2rem;
+      display: flex; flex-direction: column; gap: .85rem;
+    }
+    .coll-list li {
+      font-size: .82rem; color: var(--text2); line-height: 1.5;
+      display: flex; gap: .75rem; align-items: flex-start;
+    }
+    .coll-bullet {
+      color: var(--muted); font-size: .75rem; line-height: 1.5; flex-shrink: 0;
+    }
+    .bullet-gold { color: var(--logo-gold); }
+
+    .coll-btn {
+      display: flex; align-items: center; justify-content: center; gap: .6rem;
+      padding: .85rem 1.5rem;
+      border: 1px solid var(--text);
+      border-radius: 4px;
+      font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 500;
+      color: var(--text); text-decoration: none;
+      transition: all .25s ease;
+      text-align: center;
+    }
+    .coll-btn:hover {
+      background: var(--text); color: var(--cream);
+    }
+    .coll-btn.btn-gold-fill {
+      background: var(--logo-gold);
+      border-color: var(--logo-gold);
+      color: #fff;
+    }
+    .coll-btn.btn-gold-fill:hover {
+      background: var(--text); border-color: var(--text);
+    }
+
+    @media (max-width: 960px) {
+      .collections-grid { grid-template-columns: 1fr; max-width: 480px; gap: 2.5rem; }
+    }
+  </style>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BESPOKE ATELIER CONCIERGE — INSTANT ESTIMATOR
+  ════════════════════════════════════════════ -->
+  <section id="estimator" style="padding:clamp(4rem,8vw,7rem) 0;background:#1C1611;color:#FAF7F2;position:relative;overflow:hidden;">
+
+    <!-- Background subtle ambient glow -->
+    <div style="position:absolute;top:-100px;right:-100px;width:450px;height:450px;background:radial-gradient(circle,rgba(200,150,12,.12) 0%,transparent 70%);pointer-events:none;"></div>
+    <div style="position:absolute;bottom:-100px;left:-100px;width:450px;height:450px;background:radial-gradient(circle,rgba(42,124,52,.1) 0%,transparent 70%);pointer-events:none;"></div>
+
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="atelier-grid">
+
+        <!-- Left Column — Interactive Builder -->
+        <div>
+          <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;">
+            <span style="display:block;width:30px;height:1px;background:var(--logo-gold);"></span>
+            <span style="font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--logo-gold);font-weight:500;">Bespoke Atelier Suite</span>
+          </div>
+
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:400;color:#fff;line-height:1.1;margin-bottom:1rem;">
+            Craft your custom<br><em style="font-family:'Playfair Display',serif;color:var(--logo-gold);">wedding experience</em>
+          </h2>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.65);line-height:1.75;max-width:440px;margin-bottom:2.5rem;">
+            Tailor your crew, coverage days, and heirloom deliverables. Get an instant bespoke quote delivered directly from our director.
+          </p>
+
+          <!-- Selection Options -->
+          <div style="display:flex;flex-direction:column;gap:2rem;">
+
+            <!-- 1. Event Type Chips -->
+            <div>
+              <label style="display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.85rem;font-weight:500;">
+                01 &nbsp;·&nbsp; Select Event Coverage
+              </label>
+              <div class="atelier-chips-grid">
+                <label class="atelier-chip active" onclick="selectEvt(this, '1-Day Wedding', '1 Senior Candid Photographer, 1 Traditional Photographer, 1 Cinematic Videographer', '3 Crew')">
+                  <input type="radio" name="evtA" value="1-Day Wedding" checked style="display:none;">
+                  <span class="chip-icon"><i class="fa-solid fa-gem" style="color:var(--logo-gold);font-size:1.1rem;"></i></span>
+                  <div class="chip-info">
+                    <span class="chip-title">1-Day Wedding</span>
+                    <span class="chip-sub">Intimate / Engagement</span>
+                  </div>
+                </label>
+
+                <label class="atelier-chip" onclick="selectEvt(this, '2-Day Grand Celebration', '2 Senior Candid Photographers, 2 Cinematic 4K Videographers, Pre-Wedding Included', '5 Crew')">
+                  <input type="radio" name="evtA" value="2-Day Grand" style="display:none;">
+                  <span class="chip-icon"><i class="fa-solid fa-star" style="color:var(--logo-gold);font-size:1.1rem;"></i></span>
+                  <div class="chip-info">
+                    <span class="chip-title">2-Day Grand</span>
+                    <span class="chip-sub">Sangeet + Wedding &amp; Reception</span>
+                  </div>
+                </label>
+
+                <label class="atelier-chip" onclick="selectEvt(this, '3-Day Royal Festivities', '8-Member Elite Crew, Multi-Camera 4K, Dual Drones, Full 3-Day Coverage', '8 Crew')">
+                  <input type="radio" name="evtA" value="3-Day Royal" style="display:none;">
+                  <span class="chip-icon"><i class="fa-solid fa-crown" style="color:var(--logo-gold);font-size:1.1rem;"></i></span>
+                  <div class="chip-info">
+                    <span class="chip-title">3-Day Royal</span>
+                    <span class="chip-sub">Full Multi-Day Festivities</span>
+                  </div>
+                </label>
+
+                <label class="atelier-chip" onclick="selectEvt(this, 'Pre-Wedding Shoot', '1 Senior Cinematic Director, 1 Candid Master Photographer, Stylist Team', '2 Crew')">
+                  <input type="radio" name="evtA" value="Pre-Wedding" style="display:none;">
+                  <span class="chip-icon"><i class="fa-solid fa-camera" style="color:var(--logo-gold);font-size:1.1rem;"></i></span>
+                  <div class="chip-info">
+                    <span class="chip-title">Pre-Wedding</span>
+                    <span class="chip-sub">Palace / Destination Shoot</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- 2. Add-ons Chips -->
+            <div>
+              <label style="display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.85rem;font-weight:500;">
+                02 &nbsp;·&nbsp; Select Atelier Add-Ons
+              </label>
+              <div class="atelier-chips-grid">
+                <label class="atelier-chip active-check" onclick="toggleAddon(this, 'Aerial Drone')">
+                  <input type="checkbox" id="chDroneA" value="Aerial Drone" checked style="display:none;">
+                  <span class="chip-icon"><i class="fa-solid fa-plane-up" style="color:var(--logo-gold);font-size:1.1rem;"></i></span>
+                  <div class="chip-info">
+                    <span class="chip-title">4K Aerial Drone</span>
+                    <span class="chip-sub">Cinematic Flyover Shots</span>
+                  </div>
+                </label>
+
+                <label class="atelier-chip active-check" onclick="toggleAddon(this, 'Heirloom Album')">
+                  <input type="checkbox" id="chAlbumA" value="Heirloom Album" checked style="display:none;">
+                  <span class="chip-icon"><i class="fa-solid fa-book-open" style="color:var(--logo-gold);font-size:1.1rem;"></i></span>
+                  <div class="chip-info">
+                    <span class="chip-title">Leather Album</span>
+                    <span class="chip-sub">Flush-Mount Italian Leather</span>
+                  </div>
+                </label>
+
+                <label class="atelier-chip active-check" onclick="toggleAddon(this, 'Same-Day Reel')">
+                  <input type="checkbox" id="chReelA" value="Same-Day Reel" checked style="display:none;">
+                  <span class="chip-icon"><i class="fa-solid fa-bolt" style="color:var(--logo-gold);font-size:1.1rem;"></i></span>
+                  <div class="chip-info">
+                    <span class="chip-title">Same-Day Reel</span>
+                    <span class="chip-sub">24-Hr Instagram Teaser</span>
+                  </div>
+                </label>
+
+                <label class="atelier-chip" onclick="toggleAddon(this, 'Destination Travel')">
+                  <input type="checkbox" id="chDestA" value="Destination Travel" style="display:none;">
+                  <span class="chip-icon"><i class="fa-solid fa-earth-asia" style="color:var(--logo-gold);font-size:1.1rem;"></i></span>
+                  <div class="chip-info">
+                    <span class="chip-title">Destination Crew</span>
+                    <span class="chip-sub">Pan-India &amp; International</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- Right Column — Live Gold Wax-Sealed Invitation Receipt -->
+        <div class="atelier-receipt-box">
+          <div class="receipt-inner">
+
+            <div style="display:flex;align-items:center;justify-content:space-between;padding-bottom:1.25rem;border-bottom:1px solid rgba(200,150,12,.25);">
+              <div>
+                <div style="font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--logo-gold);font-weight:500;">Bespoke Quote Summary</div>
+                <div style="font-size:.7rem;color:rgba(255,255,255,.5);margin-top:.15rem;">WIDE FILM Studio · Banjara Hills</div>
+              </div>
+              <div class="receipt-seal">✦</div>
+            </div>
+
+            <!-- Selection Title -->
+            <div style="margin:1.5rem 0;">
+              <div style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);">Selected Coverage</div>
+              <h3 id="estTitleA" style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:400;color:#fff;line-height:1.15;margin-top:.25rem;">
+                1-Day Wedding
+              </h3>
+              <div id="estCrewBadge" style="display:inline-block;margin-top:.4rem;padding:.2rem .65rem;background:rgba(200,150,12,.15);border:1px solid rgba(200,150,12,.4);border-radius:2px;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--logo-gold);">
+                3-Member Crew Included
+              </div>
+            </div>
+
+            <!-- Detailed Inclusions List -->
+            <div style="padding:1.25rem;background:rgba(255,255,255,.04);border-radius:8px;border:1px solid rgba(255,255,255,.08);margin-bottom:1.5rem;">
+              <div style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.75rem;">Inclusions Breakdown</div>
+              <div id="estDetailsA" style="font-size:.8rem;color:rgba(255,255,255,.85);line-height:1.6;">
+                1 Senior Candid Photographer, 1 Traditional Photographer, 1 Cinematic Videographer
+              </div>
+            </div>
+
+            <!-- Selected Add-ons Badges -->
+            <div style="margin-bottom:2rem;">
+              <div style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.6rem;">Selected Add-Ons</div>
+              <div id="estAddonListA" style="display:flex;flex-wrap:wrap;gap:.4rem;">
+                <span style="font-size:.65rem;letter-spacing:.1em;padding:.25rem .6rem;background:rgba(200,150,12,.15);border:1px solid rgba(200,150,12,.3);color:var(--logo-gold);border-radius:2px;">✦ Aerial Drone</span>
+                <span style="font-size:.65rem;letter-spacing:.1em;padding:.25rem .6rem;background:rgba(200,150,12,.15);border:1px solid rgba(200,150,12,.3);color:var(--logo-gold);border-radius:2px;">✦ Heirloom Album</span>
+                <span style="font-size:.65rem;letter-spacing:.1em;padding:.25rem .6rem;background:rgba(200,150,12,.15);border:1px solid rgba(200,150,12,.3);color:var(--logo-gold);border-radius:2px;">✦ Same-Day Reel</span>
+              </div>
+            </div>
+
+            <!-- WhatsApp Action Button -->
+            <a href="#" id="estWABtnA" target="_blank" class="atelier-wa-btn">
+              <i class="fa-brands fa-whatsapp" style="font-size:1.1rem;"></i>
+              <span>Get Bespoke Quote on WhatsApp</span>
+            </a>
+
+            <div style="text-align:center;margin-top:1.25rem;">
+              <span style="font-size:.65rem;color:rgba(255,255,255,.4);letter-spacing:.05em;">
+                <i class="fa-solid fa-lock" style="font-size:.6rem;color:var(--logo-gold);margin-right:4px;"></i> 24-Hour Response Guarantee · No Obligation
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Atelier Concierge CSS -->
+  <style>
+    .atelier-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: clamp(2.5rem, 5vw, 4.5rem);
+      align-items: center;
+    }
+    .atelier-chips-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .85rem;
+    }
+    .atelier-chip {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 10px;
+      padding: .85rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: .85rem;
+      cursor: pointer;
+      transition: all .25s ease;
+      user-select: none;
+    }
+    .atelier-chip:hover {
+      background: rgba(255,255,255,.08);
+      border-color: rgba(200,150,12,.5);
+    }
+    .atelier-chip.active, .atelier-chip.active-check {
+      background: rgba(200,150,12,.12);
+      border-color: var(--logo-gold);
+      box-shadow: 0 4px 16px rgba(200,150,12,.15);
+    }
+    .chip-icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    .chip-info {
+      display: flex; flex-direction: column;
+    }
+    .chip-title {
+      font-size: .82rem; font-weight: 500; color: #fff; line-height: 1.2;
+    }
+    .chip-sub {
+      font-size: .68rem; color: rgba(255,255,255,.5); margin-top: .15rem;
+    }
+
+    .atelier-receipt-box {
+      background: linear-gradient(145deg, #251E17 0%, #1A140F 100%);
+      border: 1px solid rgba(200,150,12,.35);
+      border-radius: 16px;
+      padding: clamp(1.75rem, 3vw, 2.5rem);
+      box-shadow: 0 20px 50px rgba(0,0,0,.4);
+      position: relative;
+    }
+    .receipt-seal {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: linear-gradient(135deg, #D4A843 0%, #8B6508 100%);
+      color: #fff; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 12px rgba(200,150,12,.4);
+    }
+    .atelier-wa-btn {
+      display: flex; align-items: center; justify-content: center; gap: .75rem;
+      padding: 1rem 1.5rem;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: #fff;
+      border-radius: 6px;
+      font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(37,211,102,.25);
+      transition: all .25s ease;
+    }
+    .atelier-wa-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(37,211,102,.4);
+    }
+
+    @media (max-width: 900px) {
+      .atelier-grid { grid-template-columns: 1fr; }
+      .atelier-chips-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <!-- Atelier JS Logic -->
+  <script>
+    let curEvt = "1-Day Wedding";
+    let curCrew = "3-Member Crew Included";
+    let curDetails = "1 Senior Candid Photographer, 1 Traditional Photographer, 1 Cinematic Videographer";
+    let selectedAddons = ["Aerial Drone", "Heirloom Album", "Same-Day Reel"];
+
+    function selectEvt(el, name, details, crew) {
+      document.querySelectorAll('.atelier-chip input[name="evtA"]').forEach(i => {
+        i.closest('.atelier-chip').classList.remove('active');
+      });
+      el.classList.add('active');
+      curEvt = name;
+      curCrew = crew + " Included";
+      curDetails = details;
+      updateReceipt();
+    }
+
+    function toggleAddon(el, name) {
+      const idx = selectedAddons.indexOf(name);
+      if(idx > -1) {
+        selectedAddons.splice(idx, 1);
+        el.classList.remove('active-check');
+      } else {
+        selectedAddons.push(name);
+        el.classList.add('active-check');
+      }
+      updateReceipt();
+    }
+
+    function updateReceipt() {
+      const t = document.getElementById('estTitleA');
+      const c = document.getElementById('estCrewBadge');
+      const d = document.getElementById('estDetailsA');
+      const a = document.getElementById('estAddonListA');
+      const btn = document.getElementById('estWABtnA');
+
+      if(t) t.textContent = curEvt;
+      if(c) c.textContent = curCrew;
+      if(d) d.textContent = curDetails;
+
+      if(a) {
+        if(selectedAddons.length === 0) {
+          a.innerHTML = '<span style="font-size:.7rem;color:rgba(255,255,255,.4);">No add-ons selected</span>';
+        } else {
+          a.innerHTML = selectedAddons.map(ad => `<span style="font-size:.65rem;letter-spacing:.1em;padding:.25rem .6rem;background:rgba(200,150,12,.15);border:1px solid rgba(200,150,12,.3);color:var(--logo-gold);border-radius:2px;">✦ ${ad}</span>`).join('');
+        }
+      }
+
+      if(btn) {
+        const msg = `*WIDE FILM Bespoke Wedding Inquiry* 💍%0A%0AEvent: ${encodeURIComponent(curEvt)}%0AInclusions: ${encodeURIComponent(curDetails)}%0ASelected Add-Ons: ${encodeURIComponent(selectedAddons.join(', ') || 'None')}%0A%0APlease share availability & exact quote.`;
+        btn.href = `https://wa.me/919665351481?text=${msg}`;
+      }
+    }
+  </script>
+
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT
+  ════════════════════════════════════════════ -->
+  <section class="alt" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Images -->
+        <div class="about-img-stack" style="padding-bottom:3.5rem">
+          <div class="about-img-main">
+            <img src="assets/images/gen_hero_couple.jpg" alt="Wedding couple at Hyderabad palace" />
+          </div>
+          <div class="about-img-float">
+            <img src="assets/images/gen_mehendi.jpg" alt="Bridal mehendi detail" />
+          </div>
+          <div class="about-logo-badge">
+            <img src="assets/images/logo.png" alt="Wide Film Logo" />
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div>
+          <span class="label label-green">About Wide Film</span>
+          <span class="divider"></span>
+          <h2 class="h2">Hyderabad's most celebrated wedding storytellers</h2>
+          <p class="body-sm" style="margin-top:1.25rem">
+            Founded in 2018, <strong>WIDE FILM</strong> is a boutique wedding photography and cinematic filmmaking studio based in Banjara Hills, Hyderabad. We combine cinema-grade optics, unposed candid storytelling, and artistic portraiture into heirlooms that outlive generations.
+          </p>
+
+          <div class="info-card">
+            <div class="info-card-icon icon-gold"><i class="fa-solid fa-clock"></i></div>
+            <div class="info-card-text">
+              <div class="small">Availability</div>
+              <div class="val">Open 24 Hours · 7 Days a Week</div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card-icon icon-green"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info-card-text">
+              <div class="small">Studio Address</div>
+              <div class="val">8-2-608/1/8/A, Road No 11, Banjara Hills, Hyderabad 500034</div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card-icon icon-red"><i class="fa-solid fa-phone"></i></div>
+            <div class="info-card-text">
+              <div class="small">Book Your Date</div>
+              <div class="val"><a href="tel:+919665351481" style="color:var(--logo-red)">+91 96653 51481</a></div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <p class="testimonial-text">
+              "The wedding film literally moved our entire family to tears. Every detail was captured so beautifully — the drone shots, the candid moments, the colour — it's absolutely perfect."
+            </p>
+            <div class="testimonial-author">Pooja &amp; Harsha · Hyderabad · ★★★★★</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT & DATE RESERVATION — STUDIO CONCIERGE
+  ════════════════════════════════════════════ -->
+  <section id="contact" style="padding:clamp(4rem,8vw,7rem) 0;background:var(--paper);">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div style="text-align:center;max-width:620px;margin:0 auto clamp(3rem,5vw,4.5rem);">
+        <span class="label label-blue">Reserve Your Date</span>
+        <span class="divider divider-center"></span>
+        <h2 class="h2">Begin your story with us</h2>
+        <p class="body-sm" style="margin-top:.75rem;">
+          We take a limited number of weddings each season to ensure heirloom perfection. Dates fill quickly — reach out below.
+        </p>
+      </div>
+
+      <!-- Luxury 2-Column Booking Suite -->
+      <div class="atelier-booking-grid">
+
+        <!-- Left: Direct Channels & Studio Info -->
+        <div>
+          <div style="font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--logo-gold);font-weight:500;margin-bottom:1.25rem;">
+            Direct Concierge Channels
+          </div>
+
+          <!-- Direct Phone Card -->
+          <a href="tel:+919665351481" class="studio-channel-card">
+            <div class="channel-icon icon-gold"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <div class="channel-label">Director Desk · Call / Booking</div>
+              <div class="channel-val">+91 96653 51481</div>
+            </div>
+            <i class="fa-solid fa-arrow-right channel-arrow"></i>
+          </a>
+
+          <!-- WhatsApp Card -->
+          <a href="https://wa.me/919665351481?text=Hi%20Wide%20Film%2C%20I%20would%20like%20to%20inquire%20about%20booking%20my%20wedding." target="_blank" class="studio-channel-card">
+            <div class="channel-icon icon-green"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <div class="channel-label">Instant WhatsApp Consultation</div>
+              <div class="channel-val">Chat with Creative Director</div>
+            </div>
+            <i class="fa-solid fa-arrow-right channel-arrow"></i>
+          </a>
+
+          <!-- Studio Address Card -->
+          <div class="studio-channel-card" style="cursor:default;">
+            <div class="channel-icon icon-red"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <div class="channel-label">Banjara Hills Studio</div>
+              <div class="channel-val">8-2-608/1/8/A, Road No 11, Hyderabad 500034</div>
+            </div>
+          </div>
+
+          <!-- Map Frame -->
+          <div class="studio-map-frame">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.945228511796!2d78.4385!3d17.4145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb972e2d786d11%3A0x6b86e0c70034ec3!2sRoad%20No.%2011%2C%20Banjara%20Hills%2C%20Hyderabad%2C%20Telangana%20500034!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <!-- Right: Styled Concierge Inquiry Form -->
+        <div class="studio-form-card">
+          <div style="margin-bottom:1.75rem;">
+            <span style="font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--logo-gold);font-weight:500;">Bespoke Inquiry</span>
+            <h3 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:400;color:var(--text);margin-top:.2rem;">Check Date Availability</h3>
+          </div>
+
+          <form onsubmit="submitForm(event)" class="studio-form">
+            <div class="form-row-2">
+              <div class="studio-input-group">
+                <label>Bride &amp; Groom Names *</label>
+                <input type="text" id="fName" required placeholder="e.g. Ananya &amp; Rahul" />
+              </div>
+              <div class="studio-input-group">
+                <label>WhatsApp Contact *</label>
+                <input type="tel" id="fPhone" required placeholder="+91 98765 43210" />
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="studio-input-group">
+                <label>Wedding Date *</label>
+                <input type="date" id="fDate" required />
+              </div>
+              <div class="studio-input-group">
+                <label>City / Venue Location *</label>
+                <input type="text" id="fLoc" required placeholder="Hyderabad / Jaipur / Destination" />
+              </div>
+            </div>
+
+            <div class="studio-input-group">
+              <label>Coverage Collection Interest</label>
+              <select id="fPkg">
+                <option>Grand 2-Day Collection (Most Popular)</option>
+                <option>Royal 3-Day &amp; Destination Collection</option>
+                <option>Intimate 1-Day Coverage</option>
+                <option>Pre-Wedding Romance Shoot</option>
+                <option>Custom Bespoke Request</option>
+              </select>
+            </div>
+
+            <div class="studio-input-group">
+              <label>Tell Us About Your Celebration</label>
+              <textarea id="fNotes" rows="3" placeholder="Share your wedding aesthetic, guest count, rituals, or special requests…"></textarea>
+            </div>
+
+            <button type="submit" class="studio-submit-btn">
+              <span>✦ Request Availability &amp; Bespoke Quote</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <div id="formSuccess" class="success-msg">
+              🎉 Thank you! Connecting you directly on WhatsApp with our creative director…
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Studio Booking Suite CSS -->
+  <style>
+    .atelier-booking-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: clamp(2rem, 4vw, 3.5rem);
+      align-items: start;
+    }
+    .studio-channel-card {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1.15rem 1.5rem;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      transition: all .25s ease;
+      position: relative;
+    }
+    .studio-channel-card:hover {
+      border-color: var(--logo-gold);
+      transform: translateX(4px);
+      box-shadow: 0 8px 24px rgba(46,38,25,.06);
+    }
+    .channel-icon {
+      width: 44px; height: 44px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+    .channel-label {
+      font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted);
+    }
+    .channel-val {
+      font-size: .95rem; font-weight: 500; color: var(--text); margin-top: .15rem;
+    }
+    .channel-arrow {
+      margin-left: auto; color: var(--muted); font-size: .8rem;
+      transition: transform .25s ease, color .25s ease;
+    }
+    .studio-channel-card:hover .channel-arrow {
+      transform: translateX(4px); color: var(--logo-gold);
+    }
+
+    .studio-map-frame {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 200px;
+      margin-top: 1.5rem;
+    }
+    .studio-map-frame iframe {
+      width: 100%; height: 100%; border: none; display: block;
+    }
+
+    .studio-form-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: clamp(2rem, 4vw, 3rem);
+      box-shadow: 0 12px 36px rgba(46,38,25,.06);
+    }
+    .studio-form {
+      display: flex; flex-direction: column; gap: 1.25rem;
+    }
+    .form-row-2 {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem;
+    }
+    .studio-input-group {
+      display: flex; flex-direction: column; gap: .4rem;
+    }
+    .studio-input-group label {
+      font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 500; color: var(--text2);
+    }
+    .studio-input-group input, .studio-input-group select, .studio-input-group textarea {
+      padding: .85rem 1rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: .85rem; color: var(--text);
+      font-family: inherit;
+      transition: border-color .25s ease, box-shadow .25s ease;
+      outline: none;
+    }
+    .studio-input-group input:focus, .studio-input-group select:focus, .studio-input-group textarea:focus {
+      border-color: var(--logo-gold);
+      box-shadow: 0 0 0 3px rgba(200,150,12,.15);
+    }
+    .studio-submit-btn {
+      display: flex; align-items: center; justify-content: center; gap: .75rem;
+      padding: 1.1rem 2rem;
+      background: var(--logo-gold);
+      color: #fff;
+      border: none; border-radius: 6px;
+      font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(200,150,12,.25);
+      transition: all .25s ease;
+      margin-top: .5rem;
+    }
+    .studio-submit-btn:hover {
+      background: var(--text);
+      box-shadow: 0 12px 30px rgba(46,38,25,.3);
+    }
+
+    @media (max-width: 900px) {
+      .atelier-booking-grid { grid-template-columns: 1fr; }
+      .form-row-2 { grid-template-columns: 1fr; }
+    }
+  </style>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════════
+       LUXURY BOUTIQUE STUDIO FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="luxury-footer">
+
+    <!-- Top Statement Banner -->
+    <div class="footer-banner">
+      <div class="container">
+        <div class="footer-banner-inner">
+          <div class="footer-aperture-emblem">
+            <span class="dot-gold">✦</span>
+            <span class="dot-green">✦</span>
+            <span class="dot-red">✦</span>
+            <span class="dot-blue">✦</span>
+          </div>
+          <h2 class="footer-statement">
+            Capturing stories that <em>outlive generations.</em>
+          </h2>
+          <div class="footer-cta-row">
+            <a href="tel:+919665351481" class="footer-cta-btn btn-call">
+              <i class="fa-solid fa-phone"></i> +91 96653 51481
+            </a>
+            <a href="https://wa.me/919665351481?text=Hi%20Wide%20Film%2C%20I%20am%20inquiring%20about%20wedding%20dates." target="_blank" class="footer-cta-btn btn-wa">
+              <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Footer Directory -->
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+
+          <!-- Brand Column -->
+          <div class="footer-brand">
+            <img src="assets/images/logo.png" alt="Wide Film Logo" class="footer-logo" />
+            <p class="footer-desc">
+              Hyderabad's premier boutique wedding photography and 4K cinema studio. We document emotional family rituals, royal Nizam aesthetics, and unscripted love stories.
+            </p>
+
+            <div class="footer-social-bar">
+              <a href="#" class="social-circle social-gold" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://wa.me/919665351481" target="_blank" class="social-circle social-green" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="https://www.youtube.com" target="_blank" class="social-circle social-red" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+              <a href="tel:+919665351481" class="social-circle social-blue" aria-label="Phone Call"><i class="fa-solid fa-phone"></i></a>
+            </div>
+          </div>
+
+          <!-- Column 2: Navigate -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#vibe">Our Vibe</a></li>
+              <li><a href="#films">Cinematic Films</a></li>
+              <li><a href="#portfolio">Portfolio Gallery</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#packages">Investment</a></li>
+              <li><a href="#contact">Reserve Date</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Services -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Services</h4>
+            <ul class="footer-links">
+              <li><a href="#services">Candid Photography</a></li>
+              <li><a href="#services">4K Wedding Cinema</a></li>
+              <li><a href="#services">Pre-Wedding Shoots</a></li>
+              <li><a href="#services">Flush-Mount Leather Albums</a></li>
+              <li><a href="#services">Licensed 4K Drone Aerial</a></li>
+              <li><a href="#services">24-Hour Instagram Reels</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Studio -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Banjara Hills Studio</h4>
+            <div class="footer-info-block">
+              <div class="info-row">
+                <i class="fa-solid fa-location-dot icon-gold"></i>
+                <span>Road No 11, Banjara Hills, Hyderabad 500034</span>
+              </div>
+              <div class="info-row">
+                <i class="fa-solid fa-clock icon-green"></i>
+                <span>Open 24 Hours · 7 Days a Week</span>
+              </div>
+              <div class="info-row">
+                <i class="fa-solid fa-envelope icon-blue"></i>
+                <span>hello@widefilm.in</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom-bar">
+          <div class="copyright">
+            © 2018–2026 WIDE FILM Studios. All Rights Reserved. Crafting Heirloom Cinema in Hyderabad.
+          </div>
+          <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="back-to-top-btn">
+            <span>Back to Top</span> <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Luxury Footer CSS -->
+  <style>
+    .luxury-footer {
+      background: #15110E;
+      color: #FAF7F2;
+      position: relative;
+    }
+    .footer-banner {
+      padding: clamp(3rem, 5vw, 4.5rem) 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, #1C1612 0%, #15110E 100%);
+      text-align: center;
+    }
+    .footer-banner-inner {
+      max-width: 700px; margin: 0 auto;
+    }
+    .footer-aperture-emblem {
+      display: flex; justify-content: center; gap: .85rem; margin-bottom: 1rem;
+      font-size: .85rem;
+    }
+    .dot-gold  { color: var(--logo-gold); }
+    .dot-green { color: var(--logo-green); }
+    .dot-red   { color: var(--logo-red); }
+    .dot-blue  { color: var(--logo-blue); }
+
+    .footer-statement {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400; color: #fff; line-height: 1.25;
+      margin-bottom: 1.75rem;
+    }
+    .footer-statement em {
+      font-family: 'Playfair Display', serif;
+      color: var(--logo-gold);
+    }
+    .footer-cta-row {
+      display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;
+    }
+    .footer-cta-btn {
+      display: inline-flex; align-items: center; gap: .6rem;
+      padding: .85rem 1.75rem; border-radius: 4px;
+      font-size: .75rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 500;
+      text-decoration: none; transition: all .25s ease;
+    }
+    .btn-call {
+      background: rgba(255,255,255,.06); color: #fff; border: 1px solid rgba(255,255,255,.15);
+    }
+    .btn-call:hover {
+      background: var(--logo-gold); border-color: var(--logo-gold); color: #fff;
+    }
+    .btn-wa {
+      background: #25D366; color: #fff; border: 1px solid #25D366;
+    }
+    .btn-wa:hover {
+      background: #128C7E; border-color: #128C7E;
+    }
+
+    .footer-main {
+      padding: clamp(3.5rem, 6vw, 5rem) 0 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: clamp(2rem, 4vw, 3.5rem);
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .footer-logo {
+      height: 48px; width: auto; margin-bottom: 1.25rem;
+    }
+    .footer-desc {
+      font-size: .8rem; color: rgba(255,255,255,.6); line-height: 1.6; margin-bottom: 1.5rem;
+    }
+
+    .footer-social-bar {
+      display: flex; gap: .75rem;
+    }
+    .social-circle {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      text-decoration: none; font-size: .95rem; transition: all .25s ease;
+    }
+    .social-gold:hover  { background: var(--logo-gold);  border-color: var(--logo-gold);  }
+    .social-green:hover { background: var(--logo-green); border-color: var(--logo-green); }
+    .social-red:hover   { background: var(--logo-red);   border-color: var(--logo-red);   }
+    .social-blue:hover  { background: var(--logo-blue);  border-color: var(--logo-blue);  }
+
+    .footer-col-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem; font-weight: 500; color: var(--logo-gold);
+      margin-bottom: 1.25rem; letter-spacing: .05em;
+    }
+    .footer-links {
+      list-style: none; display: flex; flex-direction: column; gap: .75rem;
+    }
+    .footer-links a {
+      font-size: .8rem; color: rgba(255,255,255,.65); text-decoration: none;
+      transition: color .2s ease, transform .2s ease; display: inline-block;
+    }
+    .footer-links a:hover {
+      color: var(--logo-gold); transform: translateX(3px);
+    }
+
+    .footer-info-block {
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .info-row {
+      display: flex; gap: .75rem; align-items: flex-start;
+      font-size: .8rem; color: rgba(255,255,255,.65); line-height: 1.5;
+    }
+    .info-row i {
+      margin-top: .2rem; flex-shrink: 0;
+    }
+
+    .footer-bottom-bar {
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+      gap: 1rem; padding-top: 2rem; font-size: .72rem; color: rgba(255,255,255,.4);
+    }
+    .back-to-top-btn {
+      background: none; border: none; color: var(--logo-gold);
+      font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 500;
+      cursor: pointer; display: flex; align-items: center; gap: .5rem;
+      transition: color .2s ease;
+    }
+    .back-to-top-btn:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 540px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom-bar { flex-direction: column; text-align: center; }
+    }
+  </style>
+
+
+  <!-- MOBILE STICKY BAR -->
+  <div class="mobile-bar">
+    <a href="tel:+919665351481" class="mobile-bar-btn">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/919665351481?text=Hi%20Wide%20Film%2C%20I%20would%20like%20to%20inquire%20about%20booking." target="_blank">
+      <button class="mobile-bar-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</button>
+    </a>
+    <a href="#contact" class="mobile-bar-btn">
+      <i class="fa-solid fa-calendar-check"></i>
+      <span>Book</span>
+    </a>
+  </div>
+
+  <!-- VIDEO MODAL -->
+  <div class="video-modal" id="videoModal">
+    <button class="vm-close" onclick="closeVM()"><i class="fa-solid fa-xmark"></i></button>
+    <div class="vm-inner">
+      <video id="vmPlayer" controls></video>
+    </div>
+  </div>
+
+  <!-- PHOTO LIGHTBOX -->
+  <div class="lightbox" id="lbModal">
+    <button class="lb-close" onclick="closeLB()"><i class="fa-solid fa-xmark"></i></button>
+    <div class="lb-inner">
+      <img id="lbImg" src="" alt="Wide Film Portfolio" />
+      <div class="text-center">
+        <div class="h3" id="lbTitle"></div>
+        <p class="body-xs" id="lbSub" style="margin-top:.25rem"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ── Mobile Nav ──────────────────────────────
+    const ham = document.getElementById('ham');
+    const mob = document.getElementById('mobileNav');
+    ham.addEventListener('click', () => {
+      mob.classList.toggle('open');
+    });
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => mob.classList.remove('open')));
+
+    // ── Video Controls ──────────────────────────
+    function togglePlay(id, btn) {
+      const v = document.getElementById(id);
+      if (v.paused) {
+        v.play();
+        btn.innerHTML = '<i class="fa-solid fa-pause" style="font-size:.65rem"></i> Pause';
+      } else {
+        v.pause();
+        btn.innerHTML = '<i class="fa-solid fa-play" style="font-size:.65rem"></i> Play';
+      }
+    }
+    function toggleMute(id, btn) {
+      const v = document.getElementById(id);
+      v.muted = !v.muted;
+      btn.innerHTML = v.muted
+        ? '<i class="fa-solid fa-volume-xmark"></i>'
+        : '<i class="fa-solid fa-volume-high"></i>';
+    }
+    function filmTogglePlay(vId, fpoId) {
+      const v = document.getElementById(vId);
+      const box = v.closest('.film-player-box');
+      const fpo = document.getElementById(fpoId);
+      if (v.paused) {
+        v.play();
+        if(box) box.classList.add('is-playing');
+        if(fpo) {
+          fpo.classList.add('playing');
+          fpo.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        }
+      } else {
+        v.pause();
+        if(box) box.classList.remove('is-playing');
+        if(fpo) {
+          fpo.classList.remove('playing');
+          fpo.innerHTML = '<i class="fa-solid fa-play"></i>';
+        }
+      }
+    }
+
+
+
+    // ── Video Modal ─────────────────────────────
+    function openVM(src, title) {
+      const m = document.getElementById('videoModal');
+      const p = document.getElementById('vmPlayer');
+      p.src = src; p.play();
+      m.classList.add('open');
+    }
+    function closeVM() {
+      const m = document.getElementById('videoModal');
+      const p = document.getElementById('vmPlayer');
+      p.pause(); p.src = '';
+      m.classList.remove('open');
+    }
+
+    // ── Photo Lightbox ──────────────────────────
+    function openLB(src, title, sub) {
+      document.getElementById('lbImg').src = src;
+      document.getElementById('lbTitle').textContent = title || '';
+      document.getElementById('lbSub').textContent = sub || '';
+      document.getElementById('lbModal').classList.add('open');
+    }
+    function closeLB() { document.getElementById('lbModal').classList.remove('open'); }
+
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { closeVM(); closeLB(); }
+    });
+
+    // ── Gallery Filter ──────────────────────────
+    document.querySelectorAll('.flt').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.flt').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.f;
+        document.querySelectorAll('.g-item').forEach(item => {
+          const show = f === 'all' || item.dataset.cat === f;
+          item.style.display = show ? 'block' : 'none';
+        });
+      });
+    });
+    // ── Contact Form ────────────────────────────
+    function submitForm(e) {
+      e.preventDefault();
+      const name = document.getElementById('fName').value;
+      const phone = document.getElementById('fPhone').value;
+      const date = document.getElementById('fDate').value;
+      const loc = document.getElementById('fLoc').value;
+      const pkg = document.getElementById('fPkg').value;
+      const notes = document.getElementById('fNotes').value;
+
+      const s = document.getElementById('formSuccess');
+      s.style.display = 'block';
+
+      const msg = `*WIDE FILM Wedding Inquiry* 💍%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ADate: ${encodeURIComponent(date)}%0AVenue: ${encodeURIComponent(loc)}%0APackage: ${encodeURIComponent(pkg)}${notes ? `%0ANotes: ${encodeURIComponent(notes)}` : ''}%0A%0ASent via widefilm.in`;
+
+      setTimeout(() => window.open(`https://wa.me/919665351481?text=${msg}`, '_blank'), 700);
+    }
+
+    // ═══════════════════════════════════════════════════════════
+    //  BANNER ANIMATIONS
+    // ═══════════════════════════════════════════════════════════
+
+    // ── 1. Aperture Loader → dissolve into slideshow ──────────
+    const overlay = document.getElementById('apertureOverlay');
+    if (overlay) {
+      setTimeout(() => {
+        overlay.style.transition = 'opacity .8s ease';
+        overlay.style.opacity = '0';
+        overlay.style.pointerEvents = 'none';
+        setTimeout(() => { overlay.style.display = 'none'; }, 800);
+      }, 1200);
+    }
+
+    // Stagger banner text reveals
+    const els = [
+      { id:'hEye',   delay: 0   },
+      { id:'hTitle', delay: 200 },
+      { id:'hDesc',  delay: 400 },
+      { id:'hCtas',  delay: 550 },
+      { id:'hStats', delay: 700 }
+    ];
+    els.forEach(({id, delay}) => {
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if(el) el.classList.add('banner-anim-done');
+      }, delay + 1200);
+    });
+
+    // ── 2. Ken Burns Image Slideshow ──────────────────────────
+    const slides = document.querySelectorAll('.slide');
+    const dots   = document.querySelectorAll('.sdot');
+    const captions = [
+      'Marigold Mandap · Sacred Agni Ritual',
+      'Floral Arch · Rose Petals in the Air',
+      'Heritage Palace · Hyderabad Sunset',
+      'Diya Flames · Traditional Ambiance',
+      'The Radiant South Indian Bride'
+    ];
+    let current = 0, slideTimer;
+
+    function goSlide(n) {
+      if (!slides.length || n === current) return;
+      const prevIdx = current;
+      slides[prevIdx].classList.remove('active');
+      slides[prevIdx].classList.add('prev');
+      if (dots[prevIdx]) dots[prevIdx].classList.remove('active');
+      setTimeout(() => { if (slides[prevIdx]) slides[prevIdx].classList.remove('prev'); }, 1600);
+
+      current = n;
+      if (slides[current]) slides[current].classList.add('active');
+      if (dots[current]) dots[current].classList.add('active');
+      const cap = document.getElementById('captionText');
+      if(cap) {
+        cap.style.opacity = '0';
+        setTimeout(() => {
+          cap.textContent = captions[current] || '';
+          cap.style.transition = 'opacity .5s';
+          cap.style.opacity = '1';
+        }, 300);
+      }
+
+      clearInterval(slideTimer);
+      slideTimer = setInterval(() => goSlide((current + 1) % slides.length), 5500);
+    }
+
+    slideTimer = setInterval(() => goSlide((current + 1) % slides.length), 5500);
+
+    // ═══════════════════════════════════════════════════════════
+    //  GLOBAL SCROLL REVEAL OBSERVER FOR EVERY SECTION & ELEMENT
+    // ═══════════════════════════════════════════════════════════
+    (function initScrollEffects() {
+      const scrollObserverOptions = {
+        root: null,
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.05
+      };
+
+      const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, scrollObserverOptions);
+
+      // Automatically register all sections, titles, grids, cards, and images
+      const targetSelectors = [
+        'section',
+        '.section-header',
+        '.viewfinder-box',
+        '.vibe-card',
+        '.film-player-box',
+        '.g-item',
+        '.svc',
+        '.pkg',
+        '.atelier-card',
+        '.about-img-stack',
+        '.info-card',
+        '.testimonial',
+        '.studio-channel-card',
+        '.studio-form-card',
+        '.footer-grid',
+        '.footer-col',
+        '.reveal',
+        '.reveal-up',
+        '.reveal-left',
+        '.reveal-right',
+        '.reveal-scale'
+      ];
+
+      document.querySelectorAll(targetSelectors.join(', ')).forEach((el) => {
+        if (!el.classList.contains('reveal') &&
+            !el.classList.contains('reveal-left') &&
+            !el.classList.contains('reveal-right') &&
+            !el.classList.contains('reveal-scale')) {
+          el.classList.add('reveal-up');
+        }
+        scrollObserver.observe(el);
+      });
+
+      // Auto-assign stagger delays to grid cards
+      const gridSelectors = '.vibe-pillars-grid .vibe-card, .services-grid .svc, .packages-grid .pkg, .gallery-masonry .g-item, .footer-col';
+      document.querySelectorAll(gridSelectors).forEach((item, idx) => {
+        item.classList.add(`delay-${(idx % 4) + 1}`);
+      });
+    })();
+
+  </script>
+</body>
+</html>
